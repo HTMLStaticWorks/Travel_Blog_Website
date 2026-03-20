@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelog | The Art of Travel (Home v2)</title>
+    <meta name="description" content="Discover alternative premium journeys with Travelog.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 8px;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" style="color: var(--secondary);">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Travelog.
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home2.html">Home 2</a></li>
+                <li><a href="services.html">Destinations</a></li>
+                <li><a href="blog.html">Stories</a></li>
+                <li><a href="contact.html">Reach Us</a></li>
+                <li><button class="theme-toggle" aria-label="Toggle Theme">🌙</button></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle Theme">🌙</button>
+                <a href="signup.html" class="btn btn-primary" style="padding: 10px 24px; color: #fff;">Join Now</a>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section v2 -->
+    <header class="hero-v2"
+        style="--hero-bg: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1920&q=80');">
+        <div class="container">
+            <h1>The Art of Travel</h1>
+            <p>Elevate your journey with our hand-crafted, exclusive travel itineraries specifically designed for those
+                who appreciate the finer things in life.</p>
+            <div class="hero-btns" style="display: flex; gap: 16px; justify-content: center;">
+                <a href="services.html" class="btn btn-primary">Find Your Escape</a>
+                <a href="contact.html" class="btn btn-secondary">Contact Concierge</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Destination Horizontal -->
+    <section class="section">
+        <div class="container">
+            <h5 class="section-subtitle">Trending Escape</h5>
+            <h2 class="section-title">The Amalfi Coast</h2>
+
+            <div class="card-horizontal">
+                <div class="card-horiz-content">
+                    <h3 style="font-size: 2rem; margin-bottom: 16px; font-family: 'Playfair Display', serif;">A
+                        Cinematic Romance</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 1.1rem;">Clinging to dramatic
+                        cliffs above the sparkling Tyrrhenian Sea, the Amalfi Coast offers breathtaking views,
+                        pastel-colored villages, and world-class Italian cuisine. Experience private boat charters,
+                        exclusive villa stays, and sunset wine tastings.</p>
+                    <a href="services.html" class="btn btn-primary" style="align-self: flex-start;">Explore Amalfi</a>
+                </div>
+                <div class="card-horiz-img">
+                    <img src="https://images.unsplash.com/photo-1533602131908-16e7aa727f2f?auto=format&fit=crop&w=1000&q=80"
+                        alt="Amalfi Coast" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Trust -->
+    <section class="section" style="background: var(--surface-color);">
+        <div class="container">
+            <div class="grid-2">
+                <div>
+                    <h5 class="section-subtitle">Our Promise</h5>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 24px;">Redefining Luxury Travel
+                    </h2>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 24px;">At Travelog, we don't
+                        just sell vacations. We architect memories. From private jet charters to exclusive access at
+                        historic landmarks, our concierge team works tirelessly to ensure your journey is seamless.</p>
+                    <ul
+                        style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px;">
+                        <li style="display: flex; gap: 12px; align-items: center;"><span
+                                style="color: var(--secondary);">✔</span> 100% Tailor-made itineraries</li>
+                        <li style="display: flex; gap: 12px; align-items: center;"><span
+                                style="color: var(--secondary);">✔</span> Deep local expertise</li>
+                        <li style="display: flex; gap: 12px; align-items: center;"><span
+                                style="color: var(--secondary);">✔</span> Award-winning global support</li>
+                    </ul>
+                </div>
+                <div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=500&q=80"
+                            alt="Resort" style="border-radius: 16px; width: 100%; height: 100%; object-fit: cover;">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=500&q=80"
+                            alt="Paris"
+                            style="border-radius: 16px; width: 100%; height: 100%; object-fit: cover; transform: translateY(40px);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats / Highlights -->
+    <section class="stats" style="margin-top: 40px;">
+        <div class="container stats-grid">
+            <div class="stats-col">
+                <div class="stat-num">500+</div>
+                <p>Curated Experiences</p>
+            </div>
+            <div class="stats-col">
+                <div class="stat-num">99%</div>
+                <p>Client Satisfaction</p>
+            </div>
+            <div class="stats-col">
+                <div class="stat-num">24/7</div>
+                <p>Concierge Support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Catalog -->
+    <section class="section">
+        <div class="container">
+            <h5 class="section-subtitle">Diverse Realms</h5>
+            <h2 class="section-title">Experiences Beyond Dreams</h2>
+            <div class="grid-3" style="margin-top: 40px;">
+                <div class="experience-card"
+                    style="position: relative; border-radius: 20px; overflow: hidden; height: 400px; box-shadow: var(--shadow-md);">
+                    <img src="https://images.unsplash.com/photo-1544333333-333e9b06834b?auto=format&fit=crop&w=800&q=80"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="position: absolute; bottom: 0; left: 0; right: 0; padding: 30px; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
+                        <h3 style="color: white; margin-bottom: 8px;">Private Safaris</h3>
+                        <p style="font-size: 0.9rem; opacity: 0.9;">Witness the untamed wildlife of the Serengeti from a
+                            luxury lodge.</p>
+                    </div>
+                </div>
+                <div class="experience-card"
+                    style="position: relative; border-radius: 20px; overflow: hidden; height: 400px; box-shadow: var(--shadow-md); transform: translateY(30px);">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="position: absolute; bottom: 0; left: 0; right: 0; padding: 30px; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
+                        <h3 style="color: white; margin-bottom: 8px;">Island Escapes</h3>
+                        <p style="font-size: 0.9rem; opacity: 0.9;">Bora Bora's crystal clear waters and overwater
+                            bungalows await.</p>
+                    </div>
+                </div>
+                <div class="experience-card"
+                    style="position: relative; border-radius: 20px; overflow: hidden; height: 400px; box-shadow: var(--shadow-md);">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="position: absolute; bottom: 0; left: 0; right: 0; padding: 30px; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
+                        <h3 style="color: white; margin-bottom: 8px;">Mountain Retreats</h3>
+                        <p style="font-size: 0.9rem; opacity: 0.9;">Secluded luxury cabins in the heart of the Swiss
+                            Alps.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Concierge Process -->
+    <section class="section" style="background: var(--surface-color);">
+        <div class="container">
+            <div style="text-align: center;">
+                <h5 class="section-subtitle">How It Works</h5>
+                <h2 class="section-title">The Path To Perfection</h2>
+                <div
+                    style="display: flex; justify-content: space-between; gap: 40px; margin-top: 60px; flex-wrap: wrap;">
+                    <div
+                        style="flex: 1; min-width: 250px; background: var(--bg-color); padding: 40px; border-radius: 24px;">
+                        <div style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 16px; font-weight: 800;">
+                            01.</div>
+                        <h3 style="margin-bottom: 16px;">Consult</h3>
+                        <p style="color: var(--text-muted);">Share your dreams with our expert travel architects through
+                            an initial private session.</p>
+                    </div>
+                    <div
+                        style="flex: 1; min-width: 250px; background: var(--bg-color); padding: 40px; border-radius: 24px;">
+                        <div style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 16px; font-weight: 800;">
+                            02.</div>
+                        <h3 style="margin-bottom: 16px;">Design</h3>
+                        <p style="color: var(--text-muted);">We create a bespoke itinerary tailored precisely to your
+                            pulse and preferences.</p>
+                    </div>
+                    <div
+                        style="flex: 1; min-width: 250px; background: var(--bg-color); padding: 40px; border-radius: 24px;">
+                        <div style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 16px; font-weight: 800;">
+                            03.</div>
+                        <h3 style="margin-bottom: 16px;">Experience</h3>
+                        <p style="color: var(--text-muted);">Travel worry-free with our 24/7 global concierge at your
+                            side for every step.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Network -->
+    <section class="section">
+        <div class="container grid-2">
+            <div>
+                <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=800&q=80"
+                    style="border-radius: 30px; box-shadow: var(--shadow-lg); width: 100%;">
+            </div>
+            <div style="padding-left: 20px;">
+                <h5 class="section-subtitle">Global Network</h5>
+                <h2 class="section-title" style="text-align: left;">Every Continent, Every Secret.</h2>
+                <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px;">Our partnerships extend to
+                    over 150 countries, giving you exclusive access to places most people never see. We open doors that
+                    remain closed to others.</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                    <div>
+                        <h4 style="font-size: 1.5rem; color: var(--secondary);">15K+</h4>
+                        <p style="font-weight: 500;">Luxury Partners</p>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 1.5rem; color: var(--secondary);">200+</h4>
+                        <p style="font-weight: 500;">Cities Covered</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Partners -->
+    <section class="section" style="border-top: 1px solid var(--border-color); background: var(--bg-color);">
+        <div class="container">
+            <h5 class="section-subtitle"
+                style="text-align: center; opacity: 0.6; font-size: 0.8rem; margin-bottom: 40px;">TRUSTED BY WORLD
+                LEADERS</h5>
+            <div
+                style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 40px; filter: grayscale(1); opacity: 0.5;">
+                <h3 style="font-family: 'Playfair Display', serif;">ROYAL PALACE</h3>
+                <h3 style="font-family: 'Playfair Display', serif;">SKY ELITE</h3>
+                <h3 style="font-family: 'Playfair Display', serif;">OCEANIC</h3>
+                <h3 style="font-family: 'Playfair Display', serif;">GLOBO</h3>
+                <h3 style="font-family: 'Playfair Display', serif;">ZENITH</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Reusing same footer -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 8px;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="color: var(--secondary);">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Travelog.
+                    </a>
+                    <p style="margin-top: 16px;">Curating premium travel experiences for the modern explorer. Discover
+                        the world with unparalleled comfort and style.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="services.html">Destinations</a>
+                        <a href="blog.html">Stories</a>
+                        <a href="contact.html">Reach Us</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <div class="footer-links">
+                        <a href="mailto:hello@travelog.com">hello@travelog.com</a>
+                        <a href="tel:+1234567890">+1 (234) 567-890</a>
+                        <a href="#">123 Explorer Blvd,<br>New York, NY 10001</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for exclusive travel insights and early access to premium packages.</p>
+                    <form style="display: flex; gap: 8px; margin-top: 16px;">
+                        <input type="email" placeholder="Email address" class="form-input" style="padding: 10px;"
+                            required>
+                        <button type="submit" class="btn btn-primary" style="padding: 10px 20px;">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Travelog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

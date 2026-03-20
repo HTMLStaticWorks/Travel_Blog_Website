@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Stories | Travelog</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .sidebar-widget {
+            background: var(--surface-color);
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        .sidebar-widget h3 {
+            margin-bottom: 16px;
+            font-size: 1.25rem;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .sidebar-widget h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--secondary);
+        }
+
+        .recent-posts {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .recent-post-item {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .recent-post-item img {
+            width: 70px;
+            height: 70px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .recent-post-item h4 {
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+            font-family: var(--font-body);
+        }
+
+        .search-box {
+            display: flex;
+            gap: 0;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px 0 0 8px;
+            background: var(--bg-color);
+            color: var(--text-main);
+        }
+
+        .search-box button {
+            padding: 12px 20px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 0 8px 8px 0;
+            cursor: pointer;
+        }
+
+        .blog-card {
+            background: var(--surface-color);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 32px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card-img {
+            height: 350px;
+        }
+
+        .blog-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .blog-card-content {
+            padding: 32px;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 16px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .blog-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                grid-row: 1;
+                /* Move search and recent to top on mobile */
+            }
+
+            .blog-posts {
+                grid-row: 2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 8px;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" style="color: var(--secondary);">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Travelog.
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home2.html">Home 2</a></li>
+                <li><a href="services.html">Destinations</a></li>
+                <li><a href="blog.html">Stories</a></li>
+                <li><a href="contact.html">Reach Us</a></li>
+                <li><button class="theme-toggle" aria-label="Toggle Theme">🌙</button></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle Theme">🌙</button>
+                <a href="signup.html" class="btn btn-primary" style="padding: 10px 24px; color: #fff;">Join Now</a>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section v2 -->
+    <header class="hero-v2"
+        style="--hero-bg: url('https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&w=1920&q=80');">
+        <div class="container">
+            <h1>Travel Stories</h1>
+            <p>Read about our latest adventures, insider travel tips, and cultural deep-dives generated by our
+                globetrotting community.</p>
+        </div>
+    </header>
+
+    <!-- Blog Section -->
+    <section class="section">
+        <div class="container blog-layout">
+
+            <div class="blog-posts">
+                <!-- Blog Post 1 -->
+                <article class="blog-card">
+                    <div class="blog-card-img">
+                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80"
+                            alt="Alps" loading="lazy">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span>Travel Tips</span>
+                            <span>•</span>
+                            <span>March 15, 2026</span>
+                        </div>
+                        <h2 style="font-size: 2rem; margin-bottom: 16px;">How to Pack for an Alpine Ski Retreat</h2>
+                        <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">Discover the
+                            essential gear and premium luxury items you need for your next adventure to the Swiss Alps,
+                            ensuring comfort and style on the slopes.</p>
+                        <a href="#" class="btn btn-secondary">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card">
+                    <div class="blog-card-img">
+                        <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1000&q=80"
+                            alt="Paris" loading="lazy">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span>Culture</span>
+                            <span>•</span>
+                            <span>February 28, 2026</span>
+                        </div>
+                        <h2 style="font-size: 2rem; margin-bottom: 16px;">The Hidden Cafes of Paris</h2>
+                        <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">We venture away
+                            from the main tourist streets to find the most authentic and atmospheric Parisian cafes
+                            where locals spend their afternoons.</p>
+                        <a href="#" class="btn btn-secondary">Read More</a>
+                    </div>
+                </article>
+
+                <div style="text-align: center;">
+                    <button class="btn btn-secondary">Load Older Posts</button>
+                </div>
+            </div>
+
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3>Search</h3>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search stories...">
+                        <button>→</button>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>Recent Articles</h3>
+                    <div class="recent-posts">
+                        <div class="recent-post-item">
+                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=150&q=80"
+                                alt="Dubai">
+                            <div>
+                                <h4>Experiencing Dubai's Elite Desert Safaris</h4>
+                                <span style="font-size: 0.8rem; color: var(--text-muted);">March 10, 2026</span>
+                            </div>
+                        </div>
+                        <div class="recent-post-item">
+                            <img src="https://images.unsplash.com/photo-1533602131908-16e7aa727f2f?auto=format&fit=crop&w=150&q=80"
+                                alt="Amalfi">
+                            <div>
+                                <h4>Driving the Amalfi Coast in Style</h4>
+                                <span style="font-size: 0.8rem; color: var(--text-muted);">February 14, 2026</span>
+                            </div>
+                        </div>
+                        <div class="recent-post-item">
+                            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=150&q=80"
+                                alt="Kyoto">
+                            <div>
+                                <h4>Serenity in Kyoto's Bamboo Forest</h4>
+                                <span style="font-size: 0.8rem; color: var(--text-muted);">January 22, 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>Categories</h3>
+                    <ul
+                        style="display: flex; flex-direction: column; gap: 12px; margin-top: 16px; color: var(--text-muted);">
+                        <li style="display: flex; justify-content: space-between;"><a href="#">Travel Tips</a>
+                            <span>(12)</span></li>
+                        <li style="display: flex; justify-content: space-between;"><a href="#">Culture</a>
+                            <span>(8)</span></li>
+                        <li style="display: flex; justify-content: space-between;"><a href="#">Destinations</a>
+                            <span>(24)</span></li>
+                        <li style="display: flex; justify-content: space-between;"><a href="#">Food & Dining</a>
+                            <span>(14)</span></li>
+                    </ul>
+                </div>
+            </aside>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Reusing base footer structure -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 8px;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="color: var(--secondary);">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Travelog.
+                    </a>
+                    <p style="margin-top: 16px;">Curating premium travel experiences for the modern explorer. Discover
+                        the world with unparalleled comfort and style.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="services.html">Destinations</a>
+                        <a href="blog.html">Stories</a>
+                        <a href="contact.html">Reach Us</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <div class="footer-links">
+                        <a href="mailto:hello@travelog.com">hello@travelog.com</a>
+                        <a href="tel:+1234567890">+1 (234) 567-890</a>
+                        <a href="#">123 Explorer Blvd,<br>New York, NY 10001</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for exclusive travel insights and early access to premium packages.</p>
+                    <form style="display: flex; gap: 8px; margin-top: 16px;">
+                        <input type="email" placeholder="Email address" class="form-input" style="padding: 10px;"
+                            required>
+                        <button type="submit" class="btn btn-primary" style="padding: 10px 20px;">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Travelog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

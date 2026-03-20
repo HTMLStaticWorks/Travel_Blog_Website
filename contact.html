@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Our Concierge | Travelog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 8px;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--secondary);">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Travelog.
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home2.html">Home 2</a></li>
+                <li><a href="services.html">Destinations</a></li>
+                <li><a href="blog.html">Stories</a></li>
+                <li><a href="contact.html">Reach Us</a></li>
+                <li><button class="theme-toggle" aria-label="Toggle Theme">🌙</button></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle Theme">🌙</button>
+                <a href="signup.html" class="btn btn-primary" style="padding: 10px 24px; color: #fff;">Join Now</a>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section v2 -->
+    <header class="hero-v2" style="--hero-bg: url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1920&q=80');">
+        <div class="container">
+            <h1>Reach Our Concierge</h1>
+            <p>Our dedicated luxury travel advisors are available 24/7 to begin crafting your bespoke itinerary.</p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="grid-2">
+                <!-- Contact Details -->
+                <div class="contact-info">
+                    <div>
+                        <h5 class="section-subtitle" style="text-align: left;">Let's Talk</h5>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 24px; font-family: 'Playfair Display', serif;">Start Your Journey</h2>
+                        <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 40px;">Whether you're dreaming of a remote island sanctuary or a bustling cultural exploration, our team is ready to turn your vision into a flawless reality.</p>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h4 style="font-size: 1.2rem; margin-bottom: 8px;">Global Headquarters</h4>
+                            <p style="color: var(--text-muted);">123 Explorer Blvd, Suite 400<br>New York, NY 10001, USA</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <h4 style="font-size: 1.2rem; margin-bottom: 8px;">Phone Conciege</h4>
+                            <p style="color: var(--text-muted);">+1 (234) 567-890<br><span style="font-size: 0.9rem;">(Available 24/7 for Platinum Members)</span></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div>
+                            <h4 style="font-size: 1.2rem; margin-bottom: 8px;">Email Inquiries</h4>
+                            <p style="color: var(--text-muted);">hello@travelog.com<br>partnerships@travelog.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-wrapper">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 24px; font-family: 'Playfair Display', serif;">Send a Message</h3>
+                    <form>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-input" placeholder="John" required>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-input" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-top: 24px;">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-input" placeholder="john.doe@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Destination of Interest</label>
+                            <select class="form-input" style="cursor: pointer;">
+                                <option>Europe</option>
+                                <option>Asia</option>
+                                <option>Middle East</option>
+                                <option>Tropics & Islands</option>
+                                <option>Undecided / Open to ideas</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Your Message</label>
+                            <textarea class="form-textarea" placeholder="Tell us about your dream vacation, preferences, and travel dates..."></textarea>
+                        </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.25280946278!2d-74.14448737330561!3d40.69763123330617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbg!4v1700000000000!5m2!1sen!2sbg" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 8px;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--secondary);">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Travelog.
+                    </a>
+                    <p style="margin-top: 16px;">Curating premium travel experiences for the modern explorer. Discover the world with unparalleled comfort and style.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="services.html">Destinations</a>
+                        <a href="blog.html">Stories</a>
+                        <a href="contact.html">Reach Us</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <div class="footer-links">
+                        <a href="mailto:hello@travelog.com">hello@travelog.com</a>
+                        <a href="tel:+1234567890">+1 (234) 567-890</a>
+                        <a href="#">123 Explorer Blvd,<br>New York, NY 10001</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for exclusive travel insights and early access to premium packages.</p>
+                    <form style="display: flex; gap: 8px; margin-top: 16px;">
+                        <input type="email" placeholder="Email address" class="form-input" style="padding: 10px;" required>
+                        <button type="submit" class="btn btn-primary" style="padding: 10px 20px;">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Travelog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations | Travelog</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .filter-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 24px;
+            border-radius: 50px;
+            border: 1px solid var(--border-color);
+            background: var(--surface-color);
+            color: var(--text-main);
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 8px;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" style="color: var(--secondary);">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Travelog.
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home2.html">Home 2</a></li>
+                <li><a href="services.html">Destinations</a></li>
+                <li><a href="blog.html">Stories</a></li>
+                <li><a href="contact.html">Reach Us</a></li>
+                <li><button class="theme-toggle" aria-label="Toggle Theme">🌙</button></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle Theme">🌙</button>
+                <a href="signup.html" class="btn btn-primary" style="padding: 10px 24px; color: #fff;">Join Now</a>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section v2 -->
+    <header class="hero-v2"
+        style="--hero-bg: url('https://images.unsplash.com/photo-1473625247510-8ceb1760943f?auto=format&fit=crop&w=1920&q=80');">
+        <div class="container">
+            <h1>Our Destinations</h1>
+            <p>Explore our carefully curated selection of premium getaways designed to inspire, rejuvenate, and elevate
+                your spirit.</p>
+        </div>
+    </header>
+
+    <!-- Destinations Content -->
+    <section class="section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Europe</button>
+                <button class="filter-btn">Asia</button>
+                <button class="filter-btn">Tropics</button>
+                <button class="filter-btn">Middle East</button>
+            </div>
+
+            <div class="grid-3">
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=800&q=80"
+                            alt="Paris" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h5 class="section-subtitle" style="text-align: left; margin-bottom: 8px;">Europe</h5>
+                        <h3 class="card-title">Parisian Romance</h3>
+                        <p class="card-desc">7 days in the city of light. Private tours of the Louvre, Michelin-starred
+                            dining, and a suite overlooking the Eiffel Tower.</p>
+                        <a href="#" class="card-link">View Itinerary <span>→</span></a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80"
+                            alt="Dubai" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h5 class="section-subtitle" style="text-align: left; margin-bottom: 8px;">Middle East</h5>
+                        <h3 class="card-title">Dubai Elite Oasis</h3>
+                        <p class="card-desc">5 days of hyper-modern luxury, private yacht trips, and an exclusive
+                            overnight desert safari camp.</p>
+                        <a href="#" class="card-link">View Itinerary <span>→</span></a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=80"
+                            alt="Kyoto" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h5 class="section-subtitle" style="text-align: left; margin-bottom: 8px;">Asia</h5>
+                        <h3 class="card-title">Kyoto Sakura Splendor</h3>
+                        <p class="card-desc">10 days immersing into tradition. Stay in premium ryokans and enjoy
+                            exclusive tea ceremonies.</p>
+                        <a href="#" class="card-link">View Itinerary <span>→</span></a>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80"
+                            alt="Alps" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h5 class="section-subtitle" style="text-align: left; margin-bottom: 8px;">Europe</h5>
+                        <h3 class="card-title">The Grand Alps Retreat</h3>
+                        <p class="card-desc">7 days of snow, skiing, and spa. Your personal chalet with chef and
+                            immediate slope access.</p>
+                        <a href="#" class="card-link">View Itinerary <span>→</span></a>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?auto=format&fit=crop&w=800&q=80"
+                            alt="Maldives" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h5 class="section-subtitle" style="text-align: left; margin-bottom: 8px;">Tropics</h5>
+                        <h3 class="card-title">Maldives Overwater Villa</h3>
+                        <p class="card-desc">8 days in an overwater sanctuary. Private plunge pools, marine biologists,
+                            and sunset cruises.</p>
+                        <a href="#" class="card-link">View Itinerary <span>→</span></a>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1533602131908-16e7aa727f2f?auto=format&fit=crop&w=800&q=80"
+                            alt="Amalfi" class="card-img" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h5 class="section-subtitle" style="text-align: left; margin-bottom: 8px;">Europe</h5>
+                        <h3 class="card-title">Amalfi Coast Roadtrip</h3>
+                        <p class="card-desc">6 days of coastal driving in a vintage convertible, Italian cuisine, and
+                            cliffside hotels.</p>
+                        <a href="#" class="card-link">View Itinerary <span>→</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <button class="btn btn-secondary">Load More Destinations</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Reusing same footer -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 8px;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="color: var(--secondary);">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Travelog.
+                    </a>
+                    <p style="margin-top: 16px;">Curating premium travel experiences for the modern explorer. Discover
+                        the world with unparalleled comfort and style.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="services.html">Destinations</a>
+                        <a href="blog.html">Stories</a>
+                        <a href="contact.html">Reach Us</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <div class="footer-links">
+                        <a href="mailto:hello@travelog.com">hello@travelog.com</a>
+                        <a href="tel:+1234567890">+1 (234) 567-890</a>
+                        <a href="#">123 Explorer Blvd,<br>New York, NY 10001</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for exclusive travel insights and early access to premium packages.</p>
+                    <form style="display: flex; gap: 8px; margin-top: 16px;">
+                        <input type="email" placeholder="Email address" class="form-input" style="padding: 10px;"
+                            required>
+                        <button type="submit" class="btn btn-primary" style="padding: 10px 20px;">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Travelog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
