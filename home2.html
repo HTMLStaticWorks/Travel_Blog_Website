@@ -7,6 +7,7 @@
     <title>Travelog | The Art of Travel (Home v2)</title>
     <meta name="description" content="Discover alternative premium journeys with Travelog.">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 
 <body>
@@ -24,11 +25,12 @@
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="home2.html">Home 2</a></li>
+                <li><a href="home2.html" class="active">Home 2</a></li>
                 <li><a href="services.html">Destinations</a></li>
                 <li><a href="blog.html">Stories</a></li>
                 <li><a href="contact.html">Reach Us</a></li>
                 <li><button class="theme-toggle" aria-label="Toggle Theme">🌙</button></li>
+                <li class="nav-btn-mobile"><a href="signup.html" class="btn btn-primary" style="padding: 10px 24px; color: #fff;">Join Now</a></li>
             </ul>
             <div class="nav-actions">
                 <button class="theme-toggle" aria-label="Toggle Theme">🌙</button>
@@ -56,61 +58,316 @@
 
     <!-- Featured Destination Horizontal -->
     <section class="section">
-        <div class="container">
-            <h5 class="section-subtitle">Trending Escape</h5>
-            <h2 class="section-title">The Amalfi Coast</h2>
+    <div class="container">
 
-            <div class="card-horizontal">
-                <div class="card-horiz-content">
-                    <h3 style="font-size: 2rem; margin-bottom: 16px; font-family: 'Playfair Display', serif;">A
-                        Cinematic Romance</h3>
-                    <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 1.1rem;">Clinging to dramatic
-                        cliffs above the sparkling Tyrrhenian Sea, the Amalfi Coast offers breathtaking views,
-                        pastel-colored villages, and world-class Italian cuisine. Experience private boat charters,
-                        exclusive villa stays, and sunset wine tastings.</p>
-                    <a href="services.html" class="btn btn-primary" style="align-self: flex-start;">Explore Amalfi</a>
-                </div>
-                <div class="card-horiz-img">
-                    <img src="https://images.unsplash.com/photo-1533602131908-16e7aa727f2f?auto=format&fit=crop&w=1000&q=80"
-                        alt="Amalfi Coast" loading="lazy">
-                </div>
+        <h5 class="section-subtitle" style="text-align:center;">Trending Escape</h5>
+        <h2 class="section-title" style="text-align:center;">The Amalfi Coast</h2>
+
+        <style>
+            .card-horizontal {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+                align-items: center;
+                margin-top: 40px;
+            }
+
+            /* Alternate layout */
+            .card-horizontal.reverse {
+                direction: rtl;
+            }
+
+            .card-horizontal.reverse .card-horiz-content {
+                direction: ltr;
+            }
+
+            /* Content styling */
+            .card-horiz-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .card-horiz-content p {
+                max-width: 500px;
+            }
+
+            .card-horiz-content .btn {
+                margin-top: 15px;
+                transition: all 0.3s ease;
+            }
+
+            /* Button hover */
+            .card-horiz-content .btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            }
+
+            /* Image wrapper for zoom */
+            .card-horiz-img {
+                overflow: hidden;
+                border-radius: 12px;
+            }
+
+            .card-horiz-img img {
+                width: 100%;
+                transition: transform 0.5s ease;
+            }
+
+            /* Image zoom on hover */
+            .card-horiz-img:hover img {
+                transform: scale(1.08);
+            }
+
+            /* Mobile */
+            @media (max-width: 767px) {
+                .card-horizontal {
+                    grid-template-columns: 1fr;
+                }
+
+                .card-horizontal.reverse {
+                    direction: ltr;
+                }
+            }
+        </style>
+
+        <!-- Section 1 -->
+        <div class="card-horizontal">
+            <div class="card-horiz-content">
+                <h3 style="font-size: 2rem; margin-bottom: 16px; font-family: 'Playfair Display', serif;">
+                    A Cinematic Romance
+                </h3>
+
+                <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 1.1rem;">
+                    Clinging to dramatic cliffs above the sparkling Tyrrhenian Sea, the Amalfi Coast offers
+                    breathtaking views, pastel-colored villages, and world-class Italian cuisine.
+                </p>
+
+                <a href="services.html" class="btn btn-primary">
+                    Explore Amalfi
+                </a>
+            </div>
+
+            <div class="card-horiz-img">
+                <img src="https://wallpapers.com/images/hd/afternoon-in-positano-amalfi-coast-qum8yb8oya771n9r.jpg"
+                    alt="Amalfi Coast" loading="lazy">
             </div>
         </div>
-    </section>
+
+        <!-- Section 2 (ALTERNATE LAYOUT) -->
+        <div class="card-horizontal reverse">
+            <div class="card-horiz-content">
+                <h3 style="font-size: 2rem; margin-bottom: 16px; font-family: 'Playfair Display', serif;">
+                    Sunset Luxury Experience
+                </h3>
+
+                <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 1.1rem;">
+                    Enjoy private яхт cruises, hidden beaches, and golden sunsets over the Mediterranean.
+                    A once-in-a-lifetime luxury escape curated just for you.
+                </p>
+
+                <a href="services.html" class="btn btn-primary">
+                    Discover More
+                </a>
+            </div>
+
+            <div class="card-horiz-img">
+                <img src="https://m.media-amazon.com/images/I/71+yBlQfGKL._AC_UF894,1000_QL80_.jpg"
+                    alt="Amalfi Sunset" loading="lazy">
+            </div>
+        </div>
+
+    </div>
+</section>
 
     <!-- About / Trust -->
     <section class="section" style="background: var(--surface-color);">
-        <div class="container">
-            <div class="grid-2">
-                <div>
-                    <h5 class="section-subtitle">Our Promise</h5>
-                    <h2 class="section-title" style="text-align: left; margin-bottom: 24px;">Redefining Luxury Travel
-                    </h2>
-                    <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 24px;">At Travelog, we don't
-                        just sell vacations. We architect memories. From private jet charters to exclusive access at
-                        historic landmarks, our concierge team works tirelessly to ensure your journey is seamless.</p>
-                    <ul
-                        style="list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px;">
-                        <li style="display: flex; gap: 12px; align-items: center;"><span
-                                style="color: var(--secondary);">✔</span> 100% Tailor-made itineraries</li>
-                        <li style="display: flex; gap: 12px; align-items: center;"><span
-                                style="color: var(--secondary);">✔</span> Deep local expertise</li>
-                        <li style="display: flex; gap: 12px; align-items: center;"><span
-                                style="color: var(--secondary);">✔</span> Award-winning global support</li>
-                    </ul>
-                </div>
-                <div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=500&q=80"
-                            alt="Resort" style="border-radius: 16px; width: 100%; height: 100%; object-fit: cover;">
-                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=500&q=80"
-                            alt="Paris"
-                            style="border-radius: 16px; width: 100%; height: 100%; object-fit: cover; transform: translateY(40px);">
+    <div class="container">
+
+        <style>
+            .grid-2 {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+                align-items: center;
+            }
+
+            /* Center content */
+            .promise-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .promise-content p {
+                max-width: 550px;
+            }
+
+            /* List alignment */
+            .promise-list {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 32px;
+                width: 100%;
+            }
+
+            .promise-item {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                width: 100%;
+                max-width: 400px;
+                padding: 8px 10px;
+                border-radius: 8px;
+                transition: all 0.3s ease;
+            }
+
+            /* Hover lift */
+            .promise-item:hover {
+                background: rgba(255,255,255,0.05);
+                transform: translateX(5px);
+            }
+
+            /* Icon alignment FIX */
+            .promise-icon {
+                width: 25px;
+                text-align: center;
+                flex-shrink: 0;
+                color: var(--secondary);
+                transition: all 0.3s ease;
+            }
+
+            /* Glow effect */
+            .promise-item:hover .promise-icon {
+                text-shadow: 0 0 10px var(--secondary),
+                             0 0 20px var(--secondary);
+                transform: scale(1.2);
+            }
+
+            /* Text alignment */
+            .promise-item span {
+                text-align: left;
+                flex: 1;
+            }
+
+            /* Image grid */
+            .image-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .image-grid img {
+                border-radius: 16px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.4s ease;
+            }
+
+            /* Image hover zoom */
+            .image-grid img:hover {
+                transform: scale(1.05);
+            }
+
+            /* Offset image */
+            .image-grid img:nth-child(2) {
+                transform: translateY(40px);
+            }
+
+            /* Animation */
+            .fade-up {
+                opacity: 0;
+                transform: translateY(40px);
+                transition: all 0.8s ease;
+            }
+
+            .fade-up.show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .delay-1 { transition-delay: 0.2s; }
+            .delay-2 { transition-delay: 0.4s; }
+            .delay-3 { transition-delay: 0.6s; }
+
+            /* Mobile */
+            @media (max-width: 767px) {
+                .grid-2 {
+                    grid-template-columns: 1fr;
+                }
+
+                .image-grid img:nth-child(2) {
+                    transform: none;
+                }
+            }
+        </style>
+
+        <div class="grid-2">
+
+            <!-- Content -->
+            <div class="promise-content">
+                <h5 class="section-subtitle fade-up">Our Promise</h5>
+
+                <h2 class="section-title fade-up delay-1" style="margin-bottom: 24px;">
+                    Redefining Luxury Travel
+                </h2>
+
+                <p class="fade-up delay-2"
+                   style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 24px;">
+                    At Travelog, we don't just sell vacations. We architect memories. From private jet charters
+                    to exclusive access at historic landmarks, our concierge team works tirelessly to ensure
+                    your journey is seamless.
+                </p>
+
+                <div class="promise-list">
+                    <div class="promise-item fade-up delay-1">
+                        <div class="promise-icon">✔</div>
+                        <span>100% Tailor-made itineraries</span>
+                    </div>
+
+                    <div class="promise-item fade-up delay-2">
+                        <div class="promise-icon">✔</div>
+                        <span>Deep local expertise</span>
+                    </div>
+
+                    <div class="promise-item fade-up delay-3">
+                        <div class="promise-icon">✔</div>
+                        <span>Award-winning global support</span>
                     </div>
                 </div>
             </div>
+
+            <!-- Images -->
+            <div class="image-grid fade-up delay-2">
+                <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=500&q=80"
+                    alt="Resort">
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=500&q=80"
+                    alt="Paris">
+            </div>
+
         </div>
-    </section>
+    </div>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+
+        document.querySelectorAll('.fade-up').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</section>
 
     <!-- Stats / Highlights -->
     <section class="stats" style="margin-top: 40px;">
@@ -132,46 +389,115 @@
 
     <!-- Experience Catalog -->
     <section class="section">
-        <div class="container">
-            <h5 class="section-subtitle">Diverse Realms</h5>
-            <h2 class="section-title">Experiences Beyond Dreams</h2>
-            <div class="grid-3" style="margin-top: 40px;">
-                <div class="experience-card"
-                    style="position: relative; border-radius: 20px; overflow: hidden; height: 400px; box-shadow: var(--shadow-md);">
-                    <img src="https://images.unsplash.com/photo-1544333333-333e9b06834b?auto=format&fit=crop&w=800&q=80"
-                        style="width: 100%; height: 100%; object-fit: cover;">
-                    <div
-                        style="position: absolute; bottom: 0; left: 0; right: 0; padding: 30px; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
-                        <h3 style="color: white; margin-bottom: 8px;">Private Safaris</h3>
-                        <p style="font-size: 0.9rem; opacity: 0.9;">Witness the untamed wildlife of the Serengeti from a
-                            luxury lodge.</p>
-                    </div>
-                </div>
-                <div class="experience-card"
-                    style="position: relative; border-radius: 20px; overflow: hidden; height: 400px; box-shadow: var(--shadow-md); transform: translateY(30px);">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
-                        style="width: 100%; height: 100%; object-fit: cover;">
-                    <div
-                        style="position: absolute; bottom: 0; left: 0; right: 0; padding: 30px; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
-                        <h3 style="color: white; margin-bottom: 8px;">Island Escapes</h3>
-                        <p style="font-size: 0.9rem; opacity: 0.9;">Bora Bora's crystal clear waters and overwater
-                            bungalows await.</p>
-                    </div>
-                </div>
-                <div class="experience-card"
-                    style="position: relative; border-radius: 20px; overflow: hidden; height: 400px; box-shadow: var(--shadow-md);">
-                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
-                        style="width: 100%; height: 100%; object-fit: cover;">
-                    <div
-                        style="position: absolute; bottom: 0; left: 0; right: 0; padding: 30px; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white;">
-                        <h3 style="color: white; margin-bottom: 8px;">Mountain Retreats</h3>
-                        <p style="font-size: 0.9rem; opacity: 0.9;">Secluded luxury cabins in the heart of the Swiss
-                            Alps.</p>
-                    </div>
+    <div class="container">
+        <h5 class="section-subtitle" style="text-align:center;">Diverse Realms</h5>
+        <h2 class="section-title" style="text-align:center;">Experiences Beyond Dreams</h2>
+
+        <style>
+            .grid-3 {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+                margin-top: 40px;
+            }
+
+            /* Card */
+            .experience-card {
+                position: relative;
+                border-radius: 20px;
+                overflow: hidden;
+                height: 400px;
+                box-shadow: var(--shadow-md);
+                text-align: center;
+            }
+
+            .experience-card img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+
+            /* Hover zoom */
+            .experience-card:hover img {
+                transform: scale(1.08);
+            }
+
+            /* Overlay */
+            .card-overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 30px;
+                background: linear-gradient(transparent, rgba(0,0,0,0.8));
+                color: white;
+                text-align: center;
+            }
+
+            .card-overlay h3 {
+                color: white;
+                margin-bottom: 8px;
+            }
+
+            .card-overlay p {
+                font-size: 0.9rem;
+                opacity: 0.9;
+            }
+
+            /* Tablet */
+            @media (min-width: 768px) and (max-width: 1023px) {
+                .grid-3 {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .grid-3 .experience-card:nth-child(3) {
+                    grid-column: 1 / -1;
+                    justify-self: center;
+                    max-width: 400px;
+                }
+            }
+
+            /* Mobile */
+            @media (max-width: 767px) {
+                .grid-3 {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+
+        <div class="grid-3">
+
+            <!-- Card 1 -->
+            <div class="experience-card">
+                <img src="https://images.squarespace-cdn.com/content/v1/53d98d38e4b0e4d718257bcc/1678796035724-LN6QIUHO0ULMUJ7XO1RZ/Private-Safari-family-game-drive-with-Specialised-Safaris.jpg?format=750w">
+                <div class="card-overlay">
+                    <h3>Private Safaris</h3>
+                    <p>Witness the untamed wildlife of the Serengeti from a luxury lodge.</p>
                 </div>
             </div>
+
+            <!-- Card 2 (FIXED: removed translateY) -->
+            <div class="experience-card">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80">
+                <div class="card-overlay">
+                    <h3>Island Escapes</h3>
+                    <p>Bora Bora's crystal clear waters and overwater bungalows await.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="experience-card">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80">
+                <div class="card-overlay">
+                    <h3>Mountain Retreats</h3>
+                    <p>Secluded luxury cabins in the heart of the Swiss Alps.</p>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- The Concierge Process -->
     <section class="section" style="background: var(--surface-color);">
@@ -212,30 +538,152 @@
 
     <!-- Global Network -->
     <section class="section">
-        <div class="container grid-2">
-            <div>
-                <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=800&q=80"
-                    style="border-radius: 30px; box-shadow: var(--shadow-lg); width: 100%;">
+    <div class="container">
+
+        <style>
+            .grid-2 {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+                align-items: center;
+            }
+
+            /* Center content */
+            .global-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .global-content p {
+                max-width: 500px;
+            }
+
+            /* Stats alignment FIX */
+            .stats-grid {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                margin-top: 20px;
+                width: 100%;
+            }
+
+            .stat-item {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                width: 100%;
+                max-width: 300px;
+            }
+
+            /* FIX: equal width for numbers */
+            .stat-number {
+                width: 70px;
+                text-align: left;
+                font-size: 1.5rem;
+                color: var(--secondary);
+                font-weight: bold;
+                flex-shrink: 0;
+            }
+
+            /* FIX: text aligned in same line */
+            .stat-text {
+                text-align: left;
+                font-weight: 500;
+                flex: 1;
+            }
+
+            /* Image */
+            .global-img img {
+                border-radius: 30px;
+                box-shadow: var(--shadow-lg);
+                width: 100%;
+                transition: transform 0.4s ease;
+            }
+
+            /* Hover zoom */
+            .global-img img:hover {
+                transform: scale(1.05);
+            }
+
+            /* Mobile */
+            @media (max-width: 767px) {
+                .grid-2 {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+
+        <div class="grid-2">
+
+            <!-- Image -->
+            <div class="global-img" style="text-align:center;">
+                <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=800&q=80">
             </div>
-            <div style="padding-left: 20px;">
+
+            <!-- Content -->
+            <div class="global-content">
                 <h5 class="section-subtitle">Global Network</h5>
-                <h2 class="section-title" style="text-align: left;">Every Continent, Every Secret.</h2>
-                <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px;">Our partnerships extend to
-                    over 150 countries, giving you exclusive access to places most people never see. We open doors that
-                    remain closed to others.</p>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
-                    <div>
-                        <h4 style="font-size: 1.5rem; color: var(--secondary);">15K+</h4>
-                        <p style="font-weight: 500;">Luxury Partners</p>
-                    </div>
-                    <div>
-                        <h4 style="font-size: 1.5rem; color: var(--secondary);">200+</h4>
-                        <p style="font-weight: 500;">Cities Covered</p>
-                    </div>
-                </div>
+
+                <h2 class="section-title">
+                    Every Continent, Every Secret.
+                </h2>
+
+                <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 20px;">
+                    Our partnerships extend to over 150 countries, giving you exclusive access to places
+                    most people never see. We open doors that remain closed to others.
+                </p>
+
+                <style>
+    .stats-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* centers whole block */
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .stat-item {
+        display: grid;
+        grid-template-columns: 80px auto; /* fixed column */
+        align-items: center;
+        justify-content: center; /* centers row */
+        gap: 10px;
+    }
+
+    /* Numbers perfectly aligned */
+    .stat-number {
+        text-align: right;
+        font-size: 1.5rem;
+        color: var(--secondary);
+        font-weight: bold;
+    }
+
+    /* Text */
+    .stat-text {
+        text-align: left;
+        font-weight: 500;
+    }
+</style>
+
+<div class="stats-grid">
+    <div class="stat-item">
+        <div class="stat-number">15K+</div>
+        <div class="stat-text">Luxury Partners</div>
+    </div>
+
+    <div class="stat-item">
+        <div class="stat-number">200+</div>
+        <div class="stat-text">Cities Covered</div>
+    </div>
+</div>
             </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Luxury Partners -->
     <section class="section" style="border-top: 1px solid var(--border-color); background: var(--bg-color);">

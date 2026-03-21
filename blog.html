@@ -6,142 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Stories | Travelog</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <style>
-        .blog-layout {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 40px;
-        }
-
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-        }
-
-        .sidebar-widget {
-            background: var(--surface-color);
-            padding: 24px;
-            border-radius: 16px;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-color);
-        }
-
-        .sidebar-widget h3 {
-            margin-bottom: 16px;
-            font-size: 1.25rem;
-            position: relative;
-            padding-bottom: 8px;
-        }
-
-        .sidebar-widget h3::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 40px;
-            height: 2px;
-            background: var(--secondary);
-        }
-
-        .recent-posts {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .recent-post-item {
-            display: flex;
-            gap: 16px;
-            align-items: center;
-        }
-
-        .recent-post-item img {
-            width: 70px;
-            height: 70px;
-            border-radius: 8px;
-            object-fit: cover;
-        }
-
-        .recent-post-item h4 {
-            font-size: 0.95rem;
-            margin-bottom: 4px;
-            font-family: var(--font-body);
-        }
-
-        .search-box {
-            display: flex;
-            gap: 0;
-        }
-
-        .search-box input {
-            flex: 1;
-            padding: 12px 16px;
-            border: 1px solid var(--border-color);
-            border-radius: 8px 0 0 8px;
-            background: var(--bg-color);
-            color: var(--text-main);
-        }
-
-        .search-box button {
-            padding: 12px 20px;
-            background: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 0 8px 8px 0;
-            cursor: pointer;
-        }
-
-        .blog-card {
-            background: var(--surface-color);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            margin-bottom: 32px;
-            border: 1px solid var(--border-color);
-            transition: transform 0.3s;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .blog-card-img {
-            height: 350px;
-        }
-
-        .blog-card-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .blog-card-content {
-            padding: 32px;
-        }
-
-        .blog-meta {
-            display: flex;
-            gap: 16px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 12px;
-            font-weight: 500;
-        }
-
-        @media (max-width: 768px) {
-            .blog-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .sidebar {
-                grid-row: 1;
-                /* Move search and recent to top on mobile */
-            }
-
-            .blog-posts {
-                grid-row: 2;
-            }
+        /* Base page adjustments if needed */
+        .section {
+            padding-top: 60px;
         }
     </style>
 </head>
@@ -163,9 +32,10 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="home2.html">Home 2</a></li>
                 <li><a href="services.html">Destinations</a></li>
-                <li><a href="blog.html">Stories</a></li>
+                <li><a href="blog.html" class="active">Stories</a></li>
                 <li><a href="contact.html">Reach Us</a></li>
                 <li><button class="theme-toggle" aria-label="Toggle Theme">🌙</button></li>
+                <li class="nav-btn-mobile"><a href="signup.html" class="btn btn-primary" style="padding: 10px 24px; color: #fff;">Join Now</a></li>
             </ul>
             <div class="nav-actions">
                 <button class="theme-toggle" aria-label="Toggle Theme">🌙</button>
@@ -189,111 +59,346 @@
 
     <!-- Blog Section -->
     <section class="section">
-        <div class="container blog-layout">
+        <style>
+    /* ===== GRID ===== */
+    .blog-posts {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 
-            <div class="blog-posts">
-                <!-- Blog Post 1 -->
-                <article class="blog-card">
-                    <div class="blog-card-img">
-                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80"
-                            alt="Alps" loading="lazy">
-                    </div>
-                    <div class="blog-card-content">
-                        <div class="blog-meta">
-                            <span>Travel Tips</span>
-                            <span>•</span>
-                            <span>March 15, 2026</span>
-                        </div>
-                        <h2 style="font-size: 2rem; margin-bottom: 16px;">How to Pack for an Alpine Ski Retreat</h2>
-                        <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">Discover the
-                            essential gear and premium luxury items you need for your next adventure to the Swiss Alps,
-                            ensuring comfort and style on the slopes.</p>
-                        <a href="#" class="btn btn-secondary">Read More</a>
-                    </div>
-                </article>
+    @media (min-width: 768px) {
+        .blog-posts {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 
-                <!-- Blog Post 2 -->
-                <article class="blog-card">
-                    <div class="blog-card-img">
-                        <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1000&q=80"
-                            alt="Paris" loading="lazy">
-                    </div>
-                    <div class="blog-card-content">
-                        <div class="blog-meta">
-                            <span>Culture</span>
-                            <span>•</span>
-                            <span>February 28, 2026</span>
-                        </div>
-                        <h2 style="font-size: 2rem; margin-bottom: 16px;">The Hidden Cafes of Paris</h2>
-                        <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">We venture away
-                            from the main tourist streets to find the most authentic and atmospheric Parisian cafes
-                            where locals spend their afternoons.</p>
-                        <a href="#" class="btn btn-secondary">Read More</a>
-                    </div>
-                </article>
+    @media (min-width: 1024px) {
+        .blog-posts {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
 
-                <div style="text-align: center;">
-                    <button class="btn btn-secondary">Load Older Posts</button>
-                </div>
-            </div>
+    /* ===== CARD ===== */
+    .blog-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%; /* KEY for equal height */
+        border-radius: 16px;
+        overflow: hidden;
+        background: var(--surface-color);
+        transition: all 0.35s ease;
+        box-shadow: var(--shadow-md);
+        border: 1px solid var(--border-color);
+        color: var(--text-main);
+    }
 
-            <aside class="sidebar">
-                <div class="sidebar-widget">
-                    <h3>Search</h3>
-                    <div class="search-box">
-                        <input type="text" placeholder="Search stories...">
-                        <button>→</button>
-                    </div>
-                </div>
+    /* HOVER EFFECT */
+    .blog-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--secondary);
+    }
 
-                <div class="sidebar-widget">
-                    <h3>Recent Articles</h3>
-                    <div class="recent-posts">
-                        <div class="recent-post-item">
-                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=150&q=80"
-                                alt="Dubai">
-                            <div>
-                                <h4>Experiencing Dubai's Elite Desert Safaris</h4>
-                                <span style="font-size: 0.8rem; color: var(--text-muted);">March 10, 2026</span>
-                            </div>
-                        </div>
-                        <div class="recent-post-item">
-                            <img src="https://images.unsplash.com/photo-1533602131908-16e7aa727f2f?auto=format&fit=crop&w=150&q=80"
-                                alt="Amalfi">
-                            <div>
-                                <h4>Driving the Amalfi Coast in Style</h4>
-                                <span style="font-size: 0.8rem; color: var(--text-muted);">February 14, 2026</span>
-                            </div>
-                        </div>
-                        <div class="recent-post-item">
-                            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=150&q=80"
-                                alt="Kyoto">
-                            <div>
-                                <h4>Serenity in Kyoto's Bamboo Forest</h4>
-                                <span style="font-size: 0.8rem; color: var(--text-muted);">January 22, 2026</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    /* IMAGE */
+     .blog-card-img {
+        margin-bottom: 0; /* REMOVE GAP */
+        line-height: 0;   /* removes inline image spacing */
+    }
 
-                <div class="sidebar-widget">
-                    <h3>Categories</h3>
-                    <ul
-                        style="display: flex; flex-direction: column; gap: 12px; margin-top: 16px; color: var(--text-muted);">
-                        <li style="display: flex; justify-content: space-between;"><a href="#">Travel Tips</a>
-                            <span>(12)</span></li>
-                        <li style="display: flex; justify-content: space-between;"><a href="#">Culture</a>
-                            <span>(8)</span></li>
-                        <li style="display: flex; justify-content: space-between;"><a href="#">Destinations</a>
-                            <span>(24)</span></li>
-                        <li style="display: flex; justify-content: space-between;"><a href="#">Food & Dining</a>
-                            <span>(14)</span></li>
-                    </ul>
-                </div>
-            </aside>
+     .blog-card-img img {
+        display: block; /* removes bottom white space */
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
 
+    /* CONTENT */
+    .blog-card-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;       /* center horizontally */
+        justify-content: flex-start;
+        text-align: center;        /* center text */
+        padding: 24px 20px;
+        gap: 12px;
+    }
+
+    /* META */
+    .blog-meta {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+
+    /* TITLE */
+    .blog-title {
+        font-size: 1.25rem;
+        margin: 0;
+        text-align: center;
+        color: var(--text-main);
+        font-family: 'Playfair Display', serif;
+    }
+
+    /* DESCRIPTION */
+    .blog-desc {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+        text-align: center;
+        max-width: 90%; /* keeps nice alignment */
+    }
+
+    /* BUTTON FIX */
+    .blog-card .btn {
+        margin-top: auto;          /* push button to bottom */
+        align-self: center;        /* CENTER BUTTON */
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+</style>
+
+<div class="blog-posts">
+
+    <!-- 1 -->
+    <article class="blog-card">
+        <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=80">
         </div>
-    </section>
+        <div class="blog-card-content">
+            <div class="blog-meta">Travel • Mar 2026</div>
+            <h3 class="blog-title">Alpine Ski Retreat</h3>
+            <p class="blog-desc">Luxury skiing with premium stays and breathtaking alpine views.</p>
+            <a href="#" class="btn btn-secondary">Read More</a>
+        </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="blog-card">
+        <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1000&q=80">
+        </div>
+        <div class="blog-card-content">
+            <div class="blog-meta">Culture • Feb 2026</div>
+            <h3 class="blog-title">Paris Hidden Cafes</h3>
+            <p class="blog-desc">Discover authentic Parisian cafes beyond the tourist crowds.</p>
+            <a href="#" class="btn btn-secondary">Read More</a>
+        </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="blog-card">
+        <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1000&q=80">
+        </div>
+        <div class="blog-card-content">
+            <div class="blog-meta">Luxury • Jan 2026</div>
+            <h3 class="blog-title">Dubai Desert Safari</h3>
+            <p class="blog-desc">Exclusive desert experiences with private luxury camps.</p>
+            <a href="#" class="btn btn-secondary">Read More</a>
+        </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="blog-card">
+        <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80">
+        </div>
+        <div class="blog-card-content">
+            <div class="blog-meta">Beach • Jan 2026</div>
+            <h3 class="blog-title">Island Escape</h3>
+            <p class="blog-desc">Relax in tropical paradise with crystal-clear waters.</p>
+            <a href="#" class="btn btn-secondary">Read More</a>
+        </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="blog-card">
+        <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1000&q=80">
+        </div>
+        <div class="blog-card-content">
+            <div class="blog-meta">Asia • Jan 2026</div>
+            <h3 class="blog-title">Kyoto Serenity</h3>
+            <p class="blog-desc">Experience calm nature walks through bamboo forests.</p>
+            <a href="#" class="btn btn-secondary">Read More</a>
+        </div>
+    </article>
+
+    <!-- 6 -->
+    <article class="blog-card">
+        <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80">
+        </div>
+        <div class="blog-card-content">
+            <div class="blog-meta">Mountains • Dec 2025</div>
+            <h3 class="blog-title">Swiss Alps Retreat</h3>
+            <p class="blog-desc">Luxury cabins surrounded by snow-covered peaks.</p>
+            <a href="#" class="btn btn-secondary">Read More</a>
+        </div>
+    </article>
+
+    <!-- 7 -->
+    <article class="blog-card">
+        <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1000&q=80">
+        </div>
+        <div class="blog-card-content">
+            <div class="blog-meta">Europe • Dec 2025</div>
+            <h3 class="blog-title">Paris Getaway</h3>
+            <p class="blog-desc">Romantic city escape with iconic landmarks.</p>
+            <a href="#" class="btn btn-secondary">Read More</a>
+        </div>
+    </article>
+
+    <!-- 8 -->
+    <article class="blog-card">
+        <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1000&q=80">
+        </div>
+        <div class="blog-card-content">
+            <div class="blog-meta">Luxury • Dec 2025</div>
+            <h3 class="blog-title">Luxury Resorts</h3>
+            <p class="blog-desc">World-class stays with unmatched comfort.</p>
+            <a href="#" class="btn btn-secondary">Read More</a>
+        </div>
+    </article>
+
+    <!-- 9 -->
+    <article class="blog-card">
+        <div class="blog-card-img">
+            <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0d/8b/ef/53.jpg">
+        </div>
+        <div class="blog-card-content">
+            <div class="blog-meta">Travel • Nov 2025</div>
+            <h3 class="blog-title">Amalfi Drive</h3>
+            <p class="blog-desc">Scenic coastal drives with stunning views.</p>
+            <a href="#" class="btn btn-secondary">Read More</a>
+        </div>
+    </article>
+
+    <!-- 10 -->
+    <article class="blog-card">
+        <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1000&q=80">
+        </div>
+        <div class="blog-card-content">
+            <div class="blog-meta">Global • Nov 2025</div>
+            <h3 class="blog-title">Global Adventures</h3>
+            <p class="blog-desc">Explore destinations across continents.</p>
+            <a href="#" class="btn btn-secondary">Read More</a>
+        </div>
+    </article>
+
+    <!-- 11 -->
+    <article class="blog-card">
+        <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80">
+        </div>
+        <div class="blog-card-content">
+            <div class="blog-meta">Nature • Nov 2025</div>
+            <h3 class="blog-title">Nature Escapes</h3>
+            <p class="blog-desc">Reconnect with nature in peaceful settings.</p>
+            <a href="#" class="btn btn-secondary">Read More</a>
+        </div>
+    </article>
+
+    <!-- 12 -->
+    <article class="blog-card">
+        <div class="blog-card-img">
+            <img src="https://iso.500px.com/wp-content/uploads/2014/12/urbex_cover.jpg">
+        </div>
+        <div class="blog-card-content">
+            <div class="blog-meta">City • Oct 2025</div>
+            <h3 class="blog-title">Urban Exploration</h3>
+            <p class="blog-desc">Discover vibrant city life and hidden gems.</p>
+            <a href="#" class="btn btn-secondary">Read More</a>
+        </div>
+    </article>
+
+    <!-- 13 -->
+    <article class="blog-card">
+        <div class="blog-card-img">
+            <img src="https://www.sidive.com/wp-content/uploads/2020/03/Island-hopping-in-Cebu-scaled.jpg">
+        </div>
+        <div class="blog-card-content">
+            <div class="blog-meta">Travel • Oct 2025</div>
+            <h3 class="blog-title">Island Hopping</h3>
+            <p class="blog-desc">Explore multiple islands in one journey.</p>
+            <a href="#" class="btn btn-secondary">Read More</a>
+        </div>
+    </article>
+
+    <!-- 14 -->
+    <article class="blog-card">
+        <div class="blog-card-img">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=80">
+        </div>
+        <div class="blog-card-content">
+            <div class="blog-meta">Adventure • Oct 2025</div>
+            <h3 class="blog-title">Mountain Hiking</h3>
+            <p class="blog-desc">Thrilling hiking experiences in nature.</p>
+            <a href="#" class="btn btn-secondary">Read More</a>
+        </div>
+    </article>
+
+    <!-- 15 -->
+    <article class="blog-card">
+        <div class="blog-card-img">
+            <img src="https://www.visitaruba.com/blog/wp-content/uploads/2019/09/Feat-Opt-Dos.jpg">
+        </div>
+        <div class="blog-card-content">
+            <div class="blog-meta">Relax • Oct 2025</div>
+            <h3 class="blog-title">Beach Relaxation</h3>
+            <p class="blog-desc">Unwind with luxury beachside stays.</p>
+            <a href="#" class="btn btn-secondary">Read More</a>
+        </div>
+    </article>
+<!-- 16 -->
+<article class="blog-card">
+    <div class="blog-card-img">
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1000&q=80">
+    </div>
+    <div class="blog-card-content">
+        <div class="blog-meta">Nature • Sep 2025</div>
+        <h3 class="blog-title">Forest Retreat</h3>
+        <p class="blog-desc">Escape into peaceful forests and reconnect with nature.</p>
+        <a href="#" class="btn btn-secondary">Read More</a>
+    </div>
+</article>
+
+<!-- 17 -->
+<article class="blog-card">
+    <div class="blog-card-img">
+        <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?auto=format&fit=crop&w=1000&q=80">
+    </div>
+    <div class="blog-card-content">
+        <div class="blog-meta">City • Sep 2025</div>
+        <h3 class="blog-title">Night City Lights</h3>
+        <p class="blog-desc">Experience vibrant nightlife and stunning skylines.</p>
+        <a href="#" class="btn btn-secondary">Read More</a>
+    </div>
+</article>
+
+<!-- 18 -->
+<article class="blog-card">
+    <div class="blog-card-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxHGTD8MTJr81jPga8Qt3saKK8A-2BTqoXvg&s">
+    </div>
+    <div class="blog-card-content">
+        <div class="blog-meta">Adventure • Sep 2025</div>
+        <h3 class="blog-title">Cliff Adventures</h3>
+        <p class="blog-desc">Thrilling experiences at breathtaking heights.</p>
+        <a href="#" class="btn btn-secondary">Read More</a>
+    </div>
+</article>
+</div>
+    
+</section>
 
     <!-- Footer -->
     <footer class="footer">

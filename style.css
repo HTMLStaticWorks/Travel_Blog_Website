@@ -196,8 +196,13 @@ img {
   transition: width 0.3s;
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
   width: 100%;
+}
+
+.nav-links a.active {
+  color: var(--secondary);
 }
 
 .nav-actions {
@@ -695,12 +700,12 @@ img {
 .auth-page {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   background: var(--bg-color);
-  padding: 20px;
+  padding: 60px 20px;
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .auth-card {
@@ -807,6 +812,21 @@ img {
     font-size: 2rem;
   }
 
+  .nav-actions .btn-primary {
+    display: none;
+  }
+
+  .nav-links .nav-btn-mobile {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .nav-btn-mobile .btn-primary {
+    width: 100%;
+    display: block;
+  }
+
   .nav-actions .theme-toggle {
     display: none;
   }
@@ -849,4 +869,112 @@ img {
     width: 100%;
     right: -100%;
   }
+}
+
+/* Auth Page Simplified Header */
+.auth-nav {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.auth-nav .logo {
+  font-size: 32px;
+  color: #fff;
+}
+
+/* Social Auth Styles */
+.social-auth {
+  margin: 32px 0;
+  text-align: center;
+}
+
+.social-title {
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+.social-title::before,
+.social-title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 25%;
+  height: 1px;
+  background: var(--border-color);
+}
+
+.social-title::before { left: 0; }
+.social-title::after { right: 0; }
+
+.social-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--surface-color);
+  color: var(--text-main);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.social-btn:hover {
+  background: var(--bg-color);
+  transform: translateY(-2px);
+  border-color: var(--secondary);
+}
+
+.social-btn svg {
+  flex-shrink: 0;
+}
+
+/* Terms Checkbox */
+.terms-group {
+  margin: 16px 0;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+}
+
+.terms-group input {
+  cursor: pointer;
+}
+
+.terms-group a {
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+.nav-btn-mobile {
+  display: none;
+}
+
+/* Hide Scrollbar Utility but allow scrolling */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
 }

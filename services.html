@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destinations | Travelog</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <style>
         .filter-buttons {
             display: flex;
@@ -51,10 +52,11 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="home2.html">Home 2</a></li>
-                <li><a href="services.html">Destinations</a></li>
+                <li><a href="services.html" class="active">Destinations</a></li>
                 <li><a href="blog.html">Stories</a></li>
                 <li><a href="contact.html">Reach Us</a></li>
                 <li><button class="theme-toggle" aria-label="Toggle Theme">🌙</button></li>
+                <li class="nav-btn-mobile"><a href="signup.html" class="btn btn-primary" style="padding: 10px 24px; color: #fff;">Join Now</a></li>
             </ul>
             <div class="nav-actions">
                 <button class="theme-toggle" aria-label="Toggle Theme">🌙</button>
@@ -86,7 +88,47 @@
                 <button class="filter-btn">Tropics</button>
                 <button class="filter-btn">Middle East</button>
             </div>
+<style>
+    .card {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .card-img-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    /* FIX subtitle center */
+    .card-content .section-subtitle {
+        text-align: center !important;
+    }
+
+    /* FIX button center */
+    .card-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        margin-top: 10px;
+    }
+</style>
             <div class="grid-3">
                 <!-- Card 1 -->
                 <div class="card">
@@ -98,7 +140,7 @@
                         <h5 class="section-subtitle" style="text-align: left; margin-bottom: 8px;">Europe</h5>
                         <h3 class="card-title">Parisian Romance</h3>
                         <p class="card-desc">7 days in the city of light. Private tours of the Louvre, Michelin-starred
-                            dining, and a suite overlooking the Eiffel Tower.</p>
+                            dining, and a suite overlooking.</p>
                         <a href="#" class="card-link">View Itinerary <span>→</span></a>
                     </div>
                 </div>
@@ -161,7 +203,7 @@
                 <!-- Card 6 -->
                 <div class="card">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1533602131908-16e7aa727f2f?auto=format&fit=crop&w=800&q=80"
+                        <img src="https://images.visititaly.eu/uploads/articoli/evidenza/2024092715-vacanze-a-tropea-viaggio-on-the-road-dalla-costiera-alla-sicilia.jpg"
                             alt="Amalfi" class="card-img" loading="lazy">
                     </div>
                     <div class="card-content">

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Our Concierge | Travelog</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
 
@@ -23,8 +24,9 @@
                 <li><a href="home2.html">Home 2</a></li>
                 <li><a href="services.html">Destinations</a></li>
                 <li><a href="blog.html">Stories</a></li>
-                <li><a href="contact.html">Reach Us</a></li>
+                <li><a href="contact.html" class="active">Reach Us</a></li>
                 <li><button class="theme-toggle" aria-label="Toggle Theme">🌙</button></li>
+                <li class="nav-btn-mobile"><a href="signup.html" class="btn btn-primary" style="padding: 10px 24px; color: #fff;">Join Now</a></li>
             </ul>
             <div class="nav-actions">
                 <button class="theme-toggle" aria-label="Toggle Theme">🌙</button>
@@ -50,11 +52,71 @@
             <div class="grid-2">
                 <!-- Contact Details -->
                 <div class="contact-info">
-                    <div>
-                        <h5 class="section-subtitle" style="text-align: left;">Let's Talk</h5>
-                        <h2 style="font-size: 2.5rem; margin-bottom: 24px; font-family: 'Playfair Display', serif;">Start Your Journey</h2>
-                        <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 40px;">Whether you're dreaming of a remote island sanctuary or a bustling cultural exploration, our team is ready to turn your vision into a flawless reality.</p>
-                    </div>
+                    <style>
+    .talk-section {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center; /* CENTER EVERYTHING */
+        padding: 20px;
+    }
+
+    .talk-section .section-subtitle {
+        text-align: center !important;
+        margin-bottom: 10px;
+    }
+
+    .talk-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .talk-section p {
+        color: var(--text-muted);
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    /* OPTIONAL: POINTS (IF YOU ADD LIST BELOW) */
+    .talk-points {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* center block */
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .talk-point {
+        display: grid;
+        grid-template-columns: 30px auto; /* PERFECT ALIGN LINE */
+        align-items: center;
+        gap: 10px;
+        max-width: 400px;
+        width: 100%;
+        text-align: left; /* keeps text aligned in straight vertical line */
+    }
+
+    .talk-point span {
+        font-size: 1.2rem;
+    }
+</style>
+
+<div class="talk-section">
+
+    <h5 class="section-subtitle">Let's Talk</h5>
+
+    <h2>Start Your Journey</h2>
+
+    <p>
+        Whether you're dreaming of a remote island sanctuary or a bustling cultural exploration,
+        our team is ready to turn your vision into a flawless reality.
+    </p>
+
+    <!-- OPTIONAL PERFECTLY ALIGNED POINTS -->
+    
+
+</div>
 
                     <div class="info-item">
                         <div class="info-icon">📍</div>
@@ -83,17 +145,21 @@
 
                 <!-- Contact Form -->
                 <div class="contact-wrapper">
-                    <h3 style="font-size: 1.8rem; margin-bottom: 24px; font-family: 'Playfair Display', serif;">Send a Message</h3>
-                    <form>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+<style>
+    .center-heading {
+        text-align: center;
+    }
+</style>
+
+<h3 class="center-heading" style="font-size: 1.8rem; margin-bottom: 24px; font-family: 'Playfair Display', serif;">
+    Send a Message
+</h3>                    <form>
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 24px;">
                             <div class="form-group" style="margin-bottom: 0;">
-                                <label class="form-label">First Name</label>
+                                <label class="form-label">Traveler Name</label>
                                 <input type="text" class="form-input" placeholder="John" required>
                             </div>
-                            <div class="form-group" style="margin-bottom: 0;">
-                                <label class="form-label">Last Name</label>
-                                <input type="text" class="form-input" placeholder="Doe" required>
-                            </div>
+                            
                         </div>
                         <div class="form-group" style="margin-top: 24px;">
                             <label class="form-label">Email Address</label>
@@ -113,8 +179,61 @@
                             <label class="form-label">Your Message</label>
                             <textarea class="form-textarea" placeholder="Tell us about your dream vacation, preferences, and travel dates..."></textarea>
                         </div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
-                    </form>
+                        <style>
+    /* CENTER WRAPPER */
+    .btn-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+    }
+
+    /* ===== BUTTON (DEFAULT) ===== */
+    .custom-submit-btn {
+        padding: 14px 36px;
+        border-radius: 999px;
+        border: none;
+        background: linear-gradient(135deg, #a855f7, #7c3aed);
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.35s ease;
+        box-shadow: 0 8px 20px rgba(168, 85, 247, 0.3);
+        width: auto;
+    }
+
+    /* ===== HOVER EFFECT ===== */
+    .custom-submit-btn:hover {
+        background: linear-gradient(135deg, #c084fc, #9333ea);
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(168, 85, 247, 0.5);
+    }
+
+    /* ===== CLICK EFFECT ===== */
+    .custom-submit-btn:active {
+        transform: scale(0.97);
+        box-shadow: 0 6px 15px rgba(168, 85, 247, 0.3);
+    }
+
+    /* ===== DARK MODE (MATCH SCREENSHOT BUTTON) ===== */
+    body.dark-mode .custom-submit-btn {
+        background: linear-gradient(135deg, #a855f7, #7c3aed);
+        color: #fff;
+        box-shadow: 0 10px 25px rgba(168, 85, 247, 0.4);
+    }
+
+    body.dark-mode .custom-submit-btn:hover {
+        background: linear-gradient(135deg, #c084fc, #9333ea);
+    }
+</style>
+
+<!-- BUTTON HTML -->
+
+<div class="btn-wrapper">
+    <button type="submit" class="btn btn-primary custom-submit-btn">
+        Submit Inquiry
+    </button>
+</div>                    </form>
                 </div>
             </div>
 
