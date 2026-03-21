@@ -111,10 +111,20 @@ img {
   color: #fff;
 }
 
+[data-theme="dark"] .btn-primary {
+  background: var(--secondary);
+  color: #fff;
+}
+
 .btn-primary:hover {
   background: var(--secondary);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
+}
+
+[data-theme="dark"] .btn-primary:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 5px 15px rgba(192, 132, 252, 0.4);
 }
 
 .btn-secondary {
