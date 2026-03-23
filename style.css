@@ -807,6 +807,34 @@ img {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
   }
+
+  .nav-container {
+    padding: 0 20px;
+  }
+
+  .logo {
+    font-size: 24px;
+    white-space: nowrap;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  
+  .nav-actions {
+    gap: 8px;
+  }
+  
+  .nav-actions .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
 }
 
 /* 768px - Tablet */
@@ -1020,4 +1048,39 @@ img {
 }
 .hide-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari and Opera */
+}
+
+/* --- RTL Support --- */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .nav-links a::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .footer-col,
+[dir="rtl"] .about-content,
+[dir="rtl"] .card-content {
+  text-align: right;
+  align-items: flex-start;
+}
+
+[dir="rtl"] .about-item span {
+  text-align: right;
+}
+
+[dir="rtl"] .menu-toggle.open span:nth-child(2) {
+  transform: translateX(-10px);
+}
+
+[dir="rtl"] .form-input, 
+[dir="rtl"] .form-textarea {
+  text-align: right;
+}
+
+[dir="rtl"] .nav-actions {
+  flex-direction: row-reverse;
 }

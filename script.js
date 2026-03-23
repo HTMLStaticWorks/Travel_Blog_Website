@@ -94,4 +94,32 @@ document.addEventListener('DOMContentLoaded', () => {
             heroImg.style.transform = `translateY(${window.scrollY * 0.3}px)`;
         }
     });
+
+    // 6. RTL/LTR Toggle
+    const dirToggleBtns = document.querySelectorAll('.dir-toggle');
+    const currentDir = localStorage.getItem('dir') || 'ltr';
+
+    const updateDirIcons = (dir) => {
+        dirToggleBtns.forEach(btn => {
+            btn.innerHTML = dir === 'rtl' ? 'LTR' : 'RTL';
+        });
+    };
+
+    if (currentDir === 'rtl') {
+        document.documentElement.setAttribute('dir', 'rtl');
+        updateDirIcons('rtl');
+    } else {
+        updateDirIcons('ltr');
+    }
+
+    dirToggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            let dir = document.documentElement.getAttribute('dir') || 'ltr';
+            let newDir = dir === 'rtl' ? 'ltr' : 'rtl';
+
+            document.documentElement.setAttribute('dir', newDir);
+            localStorage.setItem('dir', newDir);
+            updateDirIcons(newDir);
+        });
+    });
 });

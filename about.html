@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Travelog</title>
+    <meta name="description" content="Learn more about Travelog and our premium travel experiences.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 8px;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" style="color: var(--secondary);">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Travelog.
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home2.html">Home 2</a></li>
+                <li><a href="services.html">Destinations</a></li>
+                <li><a href="blog.html">Stories</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="contact.html">Reach Us</a></li>
+                <li><button class="theme-toggle" aria-label="Toggle Theme">🌙</button></li>
+                <li class="nav-btn-mobile"><a href="signup.html" class="btn btn-primary" style="padding: 10px 24px; color: #fff;">Join Now</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="dir-toggle" aria-label="Toggle Direction" style="font-size: 14px; font-weight: bold; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-color); background: var(--surface-color); color: var(--text-main); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">LTR</button>
+                <button class="theme-toggle" aria-label="Toggle Theme">🌙</button>
+                <a href="signup.html" class="btn btn-primary" style="padding: 10px 24px; color: #fff;">Join Now</a>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section v2 -->
+    <header class="hero-v2"
+        style="--hero-bg: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1920&q=80');">
+        <div class="container">
+            <h1>Our Story.<br>Crafting Memories.</h1>
+            <p>We believe travel is more than just reaching a destination. It's about how you get there, the stories you weave, and the perspectives you gain.</p>
+        </div>
+        <style>
+/* MOBILE FIX - 360px */
+@media (max-width: 400px) {
+
+    .hero-v2 h1 {
+        font-size: 35px !important;
+        line-height: 1.3 !important;
+        word-break: break-word;
+    }
+
+    .hero-v2 p {
+        font-size: 20px !important;
+        padding: 0 10px;
+    }
+
+    .hero-v2 .container {
+        padding: 0 15px;
+    }
+}
+</style>
+    </header>
+
+    <!-- About Content Section -->
+    <section class="section" style="background: var(--surface-color);">
+    <div class="container grid-2" style="align-items: center;">
+
+        <!-- Image -->
+        <div style="text-align:center;">
+            <img src="https://images.unsplash.com/photo-1528543606781-2f6e6857f318?auto=format&fit=crop&w=1000&q=80"
+                alt="Our Journey" class="about-img" loading="lazy"
+                style="max-width:100%; border-radius: 24px; box-shadow: var(--shadow-lg);">
+        </div>
+
+        <!-- Content -->
+        <div class="about-content" 
+             style="display:flex; flex-direction:column; align-items:center; text-align:center;">
+
+            <h5 class="section-subtitle">Who We Are</h5>
+
+            <h2 class="section-title" style="margin-bottom: 24px;">
+                Defining Luxury Travel
+            </h2>
+
+            <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 24px; max-width: 600px;">
+                Founded in 2016, Travelog started with a simple vision: to create unparalleled journeys for those who seek to explore the world in utmost comfort. Today, we stand as a beacon of premium travel experiences, connecting you to the most exclusive destinations globally.
+            </p>
+
+            <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 24px; max-width: 600px;">
+                Our team of dedicated travel curators works tirelessly to ensure that every aspect of your journey is flawless. From private charters to intimate culinary experiences, we leave no stone unturned in our quest to craft the perfect itinerary.
+            </p>
+
+            <!-- LIST -->
+            <div class="about-list" style="display:flex; flex-direction:column; gap:15px; margin-top:20px; align-items:center;">
+
+                <div class="about-item" style="display:flex; align-items:center; gap:12px; justify-content:center;">
+                    <div style="font-size:18px;">🌟</div>
+                    <span>Passionate Experts</span>
+                </div>
+
+                <div class="about-item" style="display:flex; align-items:center; gap:12px; justify-content:center;">
+                    <div style="font-size:18px;">🌟</div>
+                    <span>Unmatched Quality</span>
+                </div>
+
+                <div class="about-item" style="display:flex; align-items:center; gap:12px; justify-content:center;">
+                    <div style="font-size:18px;">🌟</div>
+                    <span>Global Network Indi</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- Highlights / Stats -->
+    <section class="stats">
+        <div class="container stats-grid">
+            <div class="stats-col">
+                <div class="stat-num">150+</div>
+                <p>Global Destinations</p>
+            </div>
+            <div class="stats-col">
+                <div class="stat-num">50k+</div>
+                <p>Happy Travelers</p>
+            </div>
+            <div class="stats-col">
+                <div class="stat-num">10+</div>
+                <p>Years of Excellence</p>
+            </div>
+            <div class="stats-col">
+                <div class="stat-num">4.9</div>
+                <p>Average Rating</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section 1: Our Vision -->
+    <section class="section" style="background: var(--bg-color);">
+    <div class="container grid-2" style="align-items: center;">
+
+        <!-- Content -->
+        <div class="about-content" 
+             style="display:flex; flex-direction:column; align-items:center; text-align:center;">
+
+            <h5 class="section-subtitle">Our Vision</h5>
+
+            <h2 class="section-title" style="margin-bottom: 24px;">
+                Redefining Exploration
+            </h2>
+
+            <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 24px; max-width: 600px;">
+                We envision a world where every journey transcends the ordinary. Our goal is to craft immersive experiences that foster deep connections with diverse cultures, while maintaining the height of luxury and comfort.
+            </p>
+
+        </div>
+
+        <!-- Image -->
+        <div style="text-align:center;">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=80"
+                alt="Our Vision" class="about-img" loading="lazy"
+                style="max-width:100%; border-radius: 24px; box-shadow: var(--shadow-lg);">
+        </div>
+
+    </div>
+</section>
+
+    <!-- New Section 2: Meet The Team -->
+    <style>
+/* RESPONSIVE GRID */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+@media (max-width: 1024px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<section class="section" style="background: var(--surface-color);">
+    <div class="container">
+
+        <h5 class="section-subtitle" style="text-align: center;">The Experts</h5>
+        <h2 class="section-title" style="text-align: center; margin-bottom: 40px;">
+            Meet Our Team
+        </h2>
+
+        <div class="grid-3">
+
+            <!-- 1 -->
+            <div class="card" style="text-align:center; padding:30px; border:none; background:transparent; box-shadow:none;">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80"
+                     style="width:150px; height:150px; border-radius:50%; object-fit:cover; margin:0 auto 20px;">
+                <h3 style="font-size:1.5rem; margin-bottom:5px;">James Carter</h3>
+                <p style="color: var(--secondary);">Founder & CEO</p>
+            </div>
+
+            <!-- 2 -->
+            <div class="card" style="text-align:center; padding:30px; border:none; background:transparent; box-shadow:none;">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
+                     style="width:150px; height:150px; border-radius:50%; object-fit:cover; margin:0 auto 20px;">
+                <h3 style="font-size:1.5rem; margin-bottom:5px;">Elena Rodriguez</h3>
+                <p style="color: var(--secondary);">Head of Operations</p>
+            </div>
+
+            <!-- 3 -->
+            <div class="card" style="text-align:center; padding:30px; border:none; background:transparent; box-shadow:none;">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80"
+                     style="width:150px; height:150px; border-radius:50%; object-fit:cover; margin:0 auto 20px;">
+                <h3 style="font-size:1.5rem; margin-bottom:5px;">Aarav Patel</h3>
+                <p style="color: var(--secondary);">Lead Curator</p>
+            </div>
+
+            <!-- 4 -->
+            <div class="card" style="text-align:center; padding:30px; border:none; background:transparent; box-shadow:none;">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80"
+                     style="width:150px; height:150px; border-radius:50%; object-fit:cover; margin:0 auto 20px;">
+                <h3 style="font-size:1.5rem; margin-bottom:5px;">Sophia Lee</h3>
+                <p style="color: var(--secondary);">Travel Designer</p>
+            </div>
+
+            <!-- 5 -->
+            <div class="card" style="text-align:center; padding:30px; border:none; background:transparent; box-shadow:none;">
+                <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=400&q=80"
+                     style="width:150px; height:150px; border-radius:50%; object-fit:cover; margin:0 auto 20px;">
+                <h3 style="font-size:1.5rem; margin-bottom:5px;">Daniel Kim</h3>
+                <p style="color: var(--secondary);">Experience Manager</p>
+            </div>
+
+            <!-- 6 -->
+            <div class="card" style="text-align:center; padding:30px; border:none; background:transparent; box-shadow:none;">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80"
+                     style="width:150px; height:150px; border-radius:50%; object-fit:cover; margin:0 auto 20px;">
+                <h3 style="font-size:1.5rem; margin-bottom:5px;">Emma Wilson</h3>
+                <p style="color: var(--secondary);">Client Relations</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 8px;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="color: var(--secondary);">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Travelog.
+                    </a>
+                    <p style="margin-top: 16px;">Curating premium travel experiences for the modern explorer. Discover
+                        the world with unparalleled comfort and style.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="services.html">Destinations</a>
+                        <a href="blog.html">Stories</a>
+                        <a href="about.html">About Us</a>
+                        <a href="contact.html">Reach Us</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <div class="footer-links">
+                        <a href="mailto:hello@travelog.com">hello@travelog.com</a>
+                        <a href="tel:+1234567890">+1 (234) 567-890</a>
+                        <a href="#">123 Explorer Blvd,<br>New York, NY 10001</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for exclusive travel insights and early access to premium packages.</p>
+                    <form style="display: flex; gap: 8px; margin-top: 16px;">
+                        <input type="email" placeholder="Email address" class="form-input" style="padding: 10px;"
+                            required>
+                        <button type="submit" class="btn btn-primary" style="padding: 10px 20px;">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Travelog. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
