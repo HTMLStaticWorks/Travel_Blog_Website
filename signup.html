@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join Now | Travelog</title>
     <link rel="stylesheet" href="style.css">
-    <link rel ="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 
 <body style="overflow-y: auto;" class="hide-scrollbar">
@@ -16,20 +16,22 @@
         style="background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;">
         
         <!-- Simplified Minimal Header Moved Inside -->
-        <header class="auth-nav">
-            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 8px;">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round" style="color: var(--secondary);">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                Travelog.
-            </a>
+        <header class="auth-nav" style="position: relative; width: 100%; display: flex; justify-content: flex-end; align-items: center; padding: 20px 5%;">
         </header>
 
         <div class="auth-card" style="max-width: 520px;">
+            <div style="display: flex; justify-content: center; width: 100%;">
+                <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 8px; justify-content: center;">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" style="color: var(--secondary);">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Travelog.
+                </a>
+            </div>
             <div class="auth-header">
-                <h1 style="font-family: 'Playfair Display', serif; font-size: 1.1rem;">Join Travelog</h1>
+                <h1 style="font-family: 'Playfair Display', serif; font-size: 1.2rem;">Join Travelog</h1>
                 <p>Gain access to premium itineraries</p>
             </div>
             <form>
@@ -37,8 +39,6 @@
                         <label class="form-label">First Name</label>
                         <input type="text" class="form-input" placeholder="John" required>
                     </div>
-                    
-                <div class="form-group" style="margin-top: 16px;"></div>
                 <div class="form-group" style="margin-bottom: 0;">
                         <label class="form-label">Last Name</label>
                         <input type="text" class="form-input" placeholder="Doe" required>

@@ -32,7 +32,7 @@
   --bg-color: #0B0F19;
   --surface-color: #111827;
   --text-main: #F8FAFC;
-  --text-muted: #94A3B8;
+  --text-muted: #CBD5E1;
   --border-color: #334155;
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
@@ -421,8 +421,8 @@ img {
 .section-subtitle {
   text-align: center;
   color: var(--secondary);
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-weight: 700;
+  letter-spacing: 3px;
   text-transform: uppercase;
   font-size: 0.875rem;
   margin-bottom: var(--spacing-sm);
@@ -661,6 +661,12 @@ img {
   font-family: inherit;
   font-size: 1rem;
   transition: border-color 0.3s;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--text-muted);
+  opacity: 1;
 }
 
 .form-input:focus,
@@ -953,8 +959,14 @@ img {
 }
 
 .auth-nav .logo {
-  font-size: 32px;
-  color: #fff;
+  font-size: 28px;
+}
+
+/* Ensure the logo text adapt to theme inside the card */
+.auth-card .logo {
+  color: var(--text-main);
+  margin-bottom: 24px;
+  font-size: 36px;
 }
 
 /* Social Auth Styles */
@@ -1083,4 +1095,382 @@ img {
 
 [dir="rtl"] .nav-actions {
   flex-direction: row-reverse;
+}
+.footer-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #fff;
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+
+/* REAL BRAND COLORS */
+.facebook { background: #1877F2; }
+.instagram { 
+    background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf);
+}
+.twitter { background: #000000; }
+.linkedin { background: #0A66C2; }
+.youtube { background: #FF0000; }
+
+/* HOVER EFFECT */
+.social-icon:hover {
+    transform: translateY(-6px) scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* OPTIONAL: glow effect per brand */
+.facebook:hover { box-shadow: 0 10px 25px rgba(24,119,242,0.6); }
+.instagram:hover { box-shadow: 0 10px 25px rgba(214,41,118,0.6); }
+.twitter:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.6); }
+.linkedin:hover { box-shadow: 0 10px 25px rgba(10,102,194,0.6); }
+.youtube:hover { box-shadow: 0 10px 25px rgba(255,0,0,0.6); }
+.social-icon i {
+    font-size: 20px;
+    line-height: 1;
+}
+/* HIGHLIGHTS */
+.hero-highlights {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 14px;
+    background: rgba(255,255,255,0.1);
+    padding: 8px 14px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.highlight-item i {
+    font-size: 18px;
+}
+
+.highlight-item:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-3px);
+}
+
+/* STATS */
+.hero-stats {
+    margin-top: 30px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.stat h3 {
+    font-size: 28px;
+    color: #fff;
+    margin: 0;
+}
+
+.stat p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.8);
+    margin: 0;
+}
+
+/* MOBILE FIX */
+@media (max-width: 576px) {
+    .hero-stats {
+        gap: 20px;
+    }
+
+    .stat h3 {
+        font-size: 22px;
+    }
+}
+/* CENTER HERO CONTENT */
+.hero-v2 .container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* HIGHLIGHTS CENTER */
+.hero-highlights {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* INDIVIDUAL TAG */
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 14px;
+    background: rgba(255,255,255,0.1);
+    padding: 8px 14px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.highlight-item:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-3px);
+}
+
+/* STATS CENTER */
+.hero-stats {
+    margin-top: 30px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+/* STAT TEXT */
+.stat h3 {
+    font-size: 28px;
+    color: #fff;
+    margin: 0;
+}
+
+.stat p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.8);
+    margin: 0;
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+    .hero-stats {
+        gap: 20px;
+    }
+
+    .stat h3 {
+        font-size: 22px;
+    }
+}
+/* CENTER EVERYTHING */
+.hero-v2 .container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* TAGS */
+.story-tags {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.story-tags span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+.story-tags span:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-3px);
+}
+
+/* QUOTE */
+.story-quote {
+    margin-top: 25px;
+    max-width: 600px;
+}
+
+.story-quote p {
+    font-style: italic;
+    color: rgba(255,255,255,0.9);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+    .story-tags {
+        gap: 10px;
+    }
+
+    .story-quote p {
+        font-size: 14px;
+    }
+}
+/* CENTER EVERYTHING */
+.hero-v2 .container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* PILLARS */
+.story-pillars {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pillar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-size: 14px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.pillar i {
+    font-size: 18px;
+}
+
+.pillar:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-4px);
+}
+
+/* STORY LINE */
+.story-line {
+    margin-top: 25px;
+    max-width: 650px;
+}
+
+.story-line p {
+    font-style: italic;
+    color: rgba(255,255,255,0.9);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+    .story-pillars {
+        gap: 10px;
+    }
+
+    .story-line p {
+        font-size: 14px;
+    }
+}
+/* CENTER */
+.hero-v2 .container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* FEATURE CARDS */
+.concierge-features {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature-box {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 18px 22px;
+    width: 150px;
+    text-align: center;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+.feature-box i {
+    font-size: 22px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.feature-box h4 {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.feature-box span {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* HOVER EFFECT */
+.feature-box:hover {
+    transform: translateY(-6px) scale(1.05);
+    background: rgba(255,255,255,0.25);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* QUOTE */
+.contact-note {
+    margin-top: 25px;
+    max-width: 600px;
+}
+
+.contact-note p {
+    font-style: italic;
+    color: rgba(255,255,255,0.9);
+    font-size: 15px;
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+    .feature-box {
+        width: 120px;
+        padding: 15px;
+    }
+}
+/* DEFAULT (LIGHT MODE FIX) */
+.feature-box h4 {
+    color: #ffffff;   /* dark text for light background */
+    font-weight: 600;
+}
+
+/* OPTIONAL: improve span visibility too */
+.feature-box span {
+    color: #f4f4f4;
+}
+
+/* ICON COLOR */
+.feature-box i {
+    color: #fbfbfb;
 }
