@@ -31,10 +31,12 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Reach Us</a></li>
                 <li><button class="theme-toggle" aria-label="Toggle Theme">🌙</button></li>
-                <li class="nav-btn-mobile"><a href="signup.html" class="btn btn-primary" style="padding: 10px 24px; color: #fff;">Join Now</a></li>
+                <li class="nav-btn-mobile"><a href="signup.html" class="btn btn-primary"
+                        style="padding: 10px 24px; color: #fff;">Join Now</a></li>
             </ul>
             <div class="nav-actions">
-                <button class="dir-toggle" aria-label="Toggle Direction" style="font-size: 14px; font-weight: bold; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-color); background: var(--surface-color); color: var(--text-main); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">LTR</button>
+                <button class="dir-toggle" aria-label="Toggle Direction"
+                    style="font-size: 14px; font-weight: bold; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-color); background: var(--surface-color); color: var(--text-main); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">LTR</button>
                 <button class="theme-toggle" aria-label="Toggle Theme">🌙</button>
                 <a href="signup.html" class="btn btn-primary" style="padding: 10px 24px; color: #fff;">Join Now</a>
                 <button class="menu-toggle" aria-label="Toggle Menu">
@@ -57,248 +59,253 @@
             </div>
         </div>
         <style>
-/* MOBILE FIX - 360px */
-@media (max-width: 400px) {
+            /* MOBILE FIX - 360px */
+            @media (max-width: 400px) {
 
-    .hero-v2 h1 {
-        font-size: 35px !important;
-        line-height: 1.3 !important;
-        word-break: break-word;
-    }
+                .hero-v2 h1 {
+                    font-size: 35px !important;
+                    line-height: 1.3 !important;
+                    word-break: break-word;
+                }
 
-    .hero-v2 p {
-        font-size: 20px !important;
-        padding: 0 10px;
-    }
+                .hero-v2 p {
+                    font-size: 20px !important;
+                    padding: 0 10px;
+                }
 
-    .hero-btns {
-        display: flex;
-        flex-direction: column; /* stack buttons */
-        align-items: center;
-        gap: 10px;
-    }
+                .hero-btns {
+                    display: flex;
+                    flex-direction: column;
+                    /* stack buttons */
+                    align-items: center;
+                    gap: 10px;
+                }
 
-    .hero-btns a {
-        width: 90%; /* prevent overflow */
-        text-align: center;
-    }
+                .hero-btns a {
+                    width: 90%;
+                    /* prevent overflow */
+                    text-align: center;
+                }
 
-    .hero-v2 .container {
-        padding: 0 15px;
-    }
-}
-</style>
+                .hero-v2 .container {
+                    padding: 0 15px;
+                }
+            }
+        </style>
     </header>
 
     <!-- Services / Destinations -->
     <section class="section">
-    <div class="container">
-        <h5 class="section-subtitle" style="text-align:center;">Curated For You</h5>
-        <h2 class="section-title" style="text-align:center;">Exclusive Destinations</h2>
+        <div class="container">
+            <h5 class="section-subtitle" style="text-align:center;">Curated For You</h5>
+            <h2 class="section-title" style="text-align:center;">Exclusive Destinations</h2>
 
-        <style>
-            .grid-3 {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 20px;
-            }
-
-            /* Center all card content */
-            .card {
-                text-align: center;
-            }
-
-            .card-content {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .card-link {
-                display: inline-block;
-                margin-top: 10px;
-            }
-
-            /* Tablet view */
-            @media (min-width: 768px) and (max-width: 1023px) {
+            <style>
                 .grid-3 {
-                    grid-template-columns: repeat(2, 1fr);
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 20px;
                 }
 
-                .grid-3 .card:nth-child(3) {
-                    grid-column: 1 / -1;
-                    justify-self: center;
-                    max-width: 350px;
+                /* Center all card content */
+                .card {
+                    text-align: center;
                 }
-            }
 
-            /* Mobile */
-            @media (max-width: 767px) {
-                .grid-3 {
-                    grid-template-columns: 1fr;
+                .card-content {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                 }
-            }
-        </style>
 
-        <div class="grid-3">
+                .card-link {
+                    display: inline-block;
+                    margin-top: 10px;
+                }
 
-            <!-- Card 1 -->
-            <div class="card">
-                <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80"
-                        alt="Destination 1" class="card-img" loading="lazy" style="width:100%;">
+                /* Tablet view */
+                @media (min-width: 768px) and (max-width: 1023px) {
+                    .grid-3 {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+
+                    .grid-3 .card:nth-child(3) {
+                        grid-column: 1 / -1;
+                        justify-self: center;
+                        max-width: 350px;
+                    }
+                }
+
+                /* Mobile */
+                @media (max-width: 767px) {
+                    .grid-3 {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            </style>
+
+            <div class="grid-3">
+
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80"
+                            alt="Destination 1" class="card-img" loading="lazy" style="width:100%;">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">The Grand Alps Retreat</h3>
+                        <p class="card-desc">Experience luxury chalets nestled amidst breathtaking snowy peaks.</p>
+                        <a href="services.html" class="card-link">Discover More →</a>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <h3 class="card-title">The Grand Alps Retreat</h3>
-                    <p class="card-desc">Experience luxury chalets nestled amidst breathtaking snowy peaks.</p>
-                    <a href="services.html" class="card-link">Discover More →</a>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=80"
+                            alt="Destination 2" class="card-img" loading="lazy" style="width:100%;">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Kyoto Sakura Splendor</h3>
+                        <p class="card-desc">Immerse yourself in Japan's vibrant culture and serene landscapes.</p>
+                        <a href="services.html" class="card-link">Discover More →</a>
+                    </div>
                 </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80"
+                            alt="Destination 3" class="card-img" loading="lazy" style="width:100%;">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Dubai Elite Oasis</h3>
+                        <p class="card-desc">Indulge in futuristic luxury and untamed desert sands point.</p>
+                        <a href="services.html" class="card-link">Discover More →</a>
+                    </div>
+                </div>
+
             </div>
-
-            <!-- Card 2 -->
-            <div class="card">
-                <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=80"
-                        alt="Destination 2" class="card-img" loading="lazy" style="width:100%;">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Kyoto Sakura Splendor</h3>
-                    <p class="card-desc">Immerse yourself in Japan's vibrant culture and serene landscapes.</p>
-                    <a href="services.html" class="card-link">Discover More →</a>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="card">
-                <div class="card-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80"
-                        alt="Destination 3" class="card-img" loading="lazy" style="width:100%;">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Dubai Elite Oasis</h3>
-                    <p class="card-desc">Indulge in futuristic luxury and untamed desert sands point.</p>
-                    <a href="services.html" class="card-link">Discover More →</a>
-                </div>
-            </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- About / Why Choose Us -->
     <section class="section" style="background: var(--surface-color);">
-    <div class="container grid-2" style="align-items: center;">
+        <div class="container grid-2" style="align-items: center;">
 
-        <style>
-            /* Center right side content */
-            .about-content {
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .about-content p {
-                text-align: center;
-                max-width: 600px;
-            }
-
-            /* Center list */
-            .about-list {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 15px;
-                margin-top: 20px;
-            }
-
-            /* Align icon + text nicely */
-            .about-item {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                justify-content: center;
-            }
-
-            /* Mobile fix */
-            @media (max-width: 767px) {
-                .grid-2 {
-                    display: grid;
-                    grid-template-columns: 1fr;
+            <style>
+                /* Center right side content */
+                .about-content {
                     text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                 }
-            }
-        </style>
 
-        <!-- Image -->
-        <div style="text-align:center;">
-            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80"
-                alt="Why Choose Us" class="about-img" loading="lazy" style="max-width:100%;">
-        </div>
+                .about-content p {
+                    text-align: center;
+                    max-width: 600px;
+                }
 
-        <!-- Content -->
-        <div class="about-content">
-            <h5 class="section-subtitle">Why Travelog</h5>
+                /* Center list */
+                .about-list {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 15px;
+                    margin-top: 20px;
+                }
 
-            <h2 class="section-title" style="margin-bottom: 24px;">
-                Elevating Your Journey To An Art Form
-            </h2>
+                /* Align icon + text nicely */
+                .about-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    justify-content: center;
+                }
 
-            <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 24px;">
-                We believe travel is more than just reaching a destination. It's about how you get there, the stories
-                you weave, and the perspectives you gain. Our itineraries are crafted to perfection with zero
-                compromises.
-            </p>
-<style>
-    .about-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* keeps whole block centered */
-        gap: 15px;
-        margin-top: 20px;
-    }
+                /* Mobile fix */
+                @media (max-width: 767px) {
+                    .grid-2 {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        text-align: center;
+                    }
+                }
+            </style>
 
-    .about-item {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        width: 100%;
-        max-width: 420px; /* controls alignment width */
-    }
+            <!-- Image -->
+            <div style="text-align:center;">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80"
+                    alt="Why Choose Us" class="about-img" loading="lazy" style="max-width:100%;">
+            </div>
 
-    /* FIX: equal width for icons */
-    .about-icon {
-        width: 30px;
-        text-align: center;
-        flex-shrink: 0;
-        font-size: 18px;
-    }
+            <!-- Content -->
+            <div class="about-content">
+                <h5 class="section-subtitle">Why Travelog</h5>
 
-    /* FIX: text starts in same vertical line */
-    .about-item span {
-        text-align: left;
-        flex: 1;
-    }
-</style>
+                <h2 class="section-title" style="margin-bottom: 24px;">
+                    Elevating Your Journey To An Art Form
+                </h2>
 
-            <div class="about-list">
-                <div class="about-item">
-                    <div class="about-icon">🌟</div>
-                    <span>Bespoke Itineraries tailored to your style</span>
-                </div>
-                <div class="about-item">
-                    <div class="about-icon">🌟</div>
-                    <span>5-Star Premium Global Partnerships</span>
-                </div>
-                <div class="about-item">
-                    <div class="about-icon">🌟</div>
-                    <span>24/7 Dedicated Concierge Support</span>
+                <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 24px;">
+                    We believe travel is more than just reaching a destination. It's about how you get there, the
+                    stories
+                    you weave, and the perspectives you gain. Our itineraries are crafted to perfection with zero
+                    compromises.
+                </p>
+                <style>
+                    .about-list {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        /* keeps whole block centered */
+                        gap: 15px;
+                        margin-top: 20px;
+                    }
+
+                    .about-item {
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        width: 100%;
+                        max-width: 420px;
+                        /* controls alignment width */
+                    }
+
+                    /* FIX: equal width for icons */
+                    .about-icon {
+                        width: 30px;
+                        text-align: center;
+                        flex-shrink: 0;
+                        font-size: 18px;
+                    }
+
+                    /* FIX: text starts in same vertical line */
+                    .about-item span {
+                        text-align: left;
+                        flex: 1;
+                    }
+                </style>
+
+                <div class="about-list">
+                    <div class="about-item">
+                        <div class="about-icon">🌟</div>
+                        <span>Bespoke Itineraries tailored to your style</span>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-icon">🌟</div>
+                        <span>5-Star Premium Global Partnerships</span>
+                    </div>
+                    <div class="about-item">
+                        <div class="about-icon">🌟</div>
+                        <span>24/7 Dedicated Concierge Support</span>
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </div>
-</section>
+        </div>
+    </section>
 
     <!-- Highlights / Stats -->
     <section class="stats">
@@ -315,126 +322,126 @@
                 <div class="stat-num">10+</div>
                 <p>Years of Excellence</p>
             </div>
-            
+
         </div>
     </section>
 
     <!-- Testimonials -->
     <section class="section">
-    <div class="container">
-        <h5 class="section-subtitle" style="text-align:center;">Real Stories</h5>
-        <h2 class="section-title" style="text-align:center;">What Our Travelers Say</h2>
+        <div class="container">
+            <h5 class="section-subtitle" style="text-align:center;">Real Stories</h5>
+            <h2 class="section-title" style="text-align:center;">What Our Travelers Say</h2>
 
-        <style>
-            .grid-3 {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 20px;
-            }
-
-            /* Card styling */
-            .testimonial-card {
-                text-align: center;
-                padding: 20px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-            /* Text alignment same line across cards */
-            .testi-text {
-                text-align: center;
-                max-width: 90%;
-                margin-bottom: 20px;
-            }
-
-            /* Author section centered */
-            .testi-author {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-            }
-
-            .author-img {
-                border-radius: 50%;
-            }
-
-            /* Tablet view */
-            @media (min-width: 768px) and (max-width: 1023px) {
+            <style>
                 .grid-3 {
-                    grid-template-columns: repeat(2, 1fr);
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 20px;
                 }
 
-                .grid-3 .testimonial-card:nth-child(3) {
-                    grid-column: 1 / -1;
-                    justify-self: center;
-                    max-width: 400px;
+                /* Card styling */
+                .testimonial-card {
+                    text-align: center;
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
                 }
-            }
 
-            /* Mobile */
-            @media (max-width: 767px) {
-                .grid-3 {
-                    grid-template-columns: 1fr;
+                /* Text alignment same line across cards */
+                .testi-text {
+                    text-align: center;
+                    max-width: 90%;
+                    margin-bottom: 20px;
                 }
-            }
-        </style>
 
-        <div class="grid-3">
+                /* Author section centered */
+                .testi-author {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                }
 
-            <!-- Card 1 -->
-            <div class="testimonial-card">
-                <p class="testi-text">
-                    "Travelog curated a Maldives trip that honestly exceeded every expectation.
-                    Every transfer, villa, and dinner was absolutely flawless. Pure perfection."
-                </p>
-                <div class="testi-author">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80"
-                        alt="Sarah J." class="author-img" loading="lazy">
-                    <div>
-                        <h4>Sarah Jenkins</h4>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Creative Director</p>
+                .author-img {
+                    border-radius: 50%;
+                }
+
+                /* Tablet view */
+                @media (min-width: 768px) and (max-width: 1023px) {
+                    .grid-3 {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+
+                    .grid-3 .testimonial-card:nth-child(3) {
+                        grid-column: 1 / -1;
+                        justify-self: center;
+                        max-width: 400px;
+                    }
+                }
+
+                /* Mobile */
+                @media (max-width: 767px) {
+                    .grid-3 {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            </style>
+
+            <div class="grid-3">
+
+                <!-- Card 1 -->
+                <div class="testimonial-card">
+                    <p class="testi-text">
+                        "Travelog curated a Maldives trip that honestly exceeded every expectation.
+                        Every transfer, villa, and dinner was absolutely flawless. Pure perfection."
+                    </p>
+                    <div class="testi-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80"
+                            alt="Sarah J." class="author-img" loading="lazy">
+                        <div>
+                            <h4>Sarah Jenkins</h4>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Creative Director</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Card 2 -->
-            <div class="testimonial-card">
-                <p class="testi-text">
-                    "The level of detail they put into understanding my preferences before
-                    crafting the Japan itinerary was incredible. A completely transformative experience."
-                </p>
-                <div class="testi-author">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
-                        alt="Michael T." class="author-img" loading="lazy">
-                    <div>
-                        <h4>Michael Thompson</h4>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Entrepreneur</p>
+                <!-- Card 2 -->
+                <div class="testimonial-card">
+                    <p class="testi-text">
+                        "The level of detail they put into understanding my preferences before
+                        crafting the Japan itinerary was incredible. A completely transformative experience."
+                    </p>
+                    <div class="testi-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+                            alt="Michael T." class="author-img" loading="lazy">
+                        <div>
+                            <h4>Michael Thompson</h4>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Entrepreneur</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Card 3 -->
-            <div class="testimonial-card">
-                <p class="testi-text">
-                    "From the Swiss Alps to the deserts of Dubai, Travelog has been my go-to
-                    luxury travel partner. They handle the stress, I just enjoy the magic."
-                </p>
-                <div class="testi-author">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80"
-                        alt="Emily R." class="author-img" loading="lazy">
-                    <div>
-                        <h4>Emily Rodriguez</h4>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Architect</p>
+                <!-- Card 3 -->
+                <div class="testimonial-card">
+                    <p class="testi-text">
+                        "From the Swiss Alps to the deserts of Dubai, Travelog has been my go-to
+                        luxury travel partner. They handle the stress, I just enjoy the magic."
+                    </p>
+                    <div class="testi-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80"
+                            alt="Emily R." class="author-img" loading="lazy">
+                        <div>
+                            <h4>Emily Rodriguez</h4>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Architect</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- CTA Section -->
     <section class="section"
@@ -444,30 +451,30 @@
             <p style="font-size: 1.2rem; margin-bottom: 40px; max-width: 600px; margin-inline: auto;">Join
                 our exclusive membership to unlock hidden destinations, priority bookings, and bespoke concierges.</p>
             <style>
-    .custom-btn {
-        background: white;
-        color: var(--primary);
-        font-size: 1.1rem;
-        padding: 16px 40px;
-        display: inline-block;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        border-radius: 6px;
-        border: 2px solid transparent;
-    }
+                .custom-btn {
+                    background: white;
+                    color: var(--primary);
+                    font-size: 1.1rem;
+                    padding: 16px 40px;
+                    display: inline-block;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                    border-radius: 6px;
+                    border: 2px solid transparent;
+                }
 
-    .custom-btn:hover {
-        background: var(--primary);
-        color: white;
-        border: 2px solid white;
-        transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
-</style>
+                .custom-btn:hover {
+                    background: var(--primary);
+                    color: white;
+                    border: 2px solid white;
+                    transform: translateY(-3px);
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+                }
+            </style>
 
-<a href="signup.html" class="btn custom-btn">
-    Become a Member
-</a>
+            <a href="signup.html" class="btn custom-btn">
+                Become a Member
+            </a>
         </div>
     </section>
 
@@ -487,21 +494,22 @@
                     </a>
                     <p style="margin-top: 16px;">Curating premium travel experiences for the modern explorer. Discover
                         the world with unparalleled comfort and style.</p>
-                        <div class="footer-social">
+                    <div class="footer-social">
                         <a href="#" class="social-icon facebook"><i class="ri-facebook-fill"></i></a>
                         <a href="#" class="social-icon instagram"><i class="ri-instagram-line"></i></a>
                         <a href="#" class="social-icon twitter"><i class="ri-twitter-x-line"></i></a>
                         <a href="#" class="social-icon linkedin"><i class="ri-linkedin-fill"></i></a>
-                         <a href="#" class="social-icon youtube"><i class="ri-youtube-fill"></i></a>
-                                 </div>
+                        <a href="#" class="social-icon youtube"><i class="ri-youtube-fill"></i></a>
+                    </div>
                 </div>
                 <div class="footer-col">
                     <h3>Quick Links</h3>
                     <div class="footer-links">
                         <a href="index.html">Home</a>
+                                                <a href="about.html">About Us</a>
+
                         <a href="services.html">Destinations</a>
                         <a href="blog.html">Stories</a>
-                        <a href="about.html">About Us</a>
                         <a href="contact.html">Reach Us</a>
                     </div>
                 </div>
@@ -512,7 +520,7 @@
                         <a href="mailto:hello@travelog.com">hello@travelog.com</a>
                         <a href="tel:+1234567890">+1 (234) 567-890</a>
                         <a href="#">123 Explorer Blvd,<br>New York, NY 10001</a>
-                         
+
                     </div>
                 </div>
                 <div class="footer-col">
@@ -530,11 +538,10 @@
             </div>
         </div>
     </footer>
-<!-- Scripts -->
+    <!-- Scripts -->
     <script src="../assets/js/main.js"></script>
     <!-- Back to Top Button -->
-<button id="backToTopBtn"
-    style="
+    <button id="backToTopBtn" style="
         position: fixed;
         bottom: 30px;
         right: 30px;
@@ -548,32 +555,31 @@
         cursor: pointer;
         box-shadow: 0 25px 25px rgba(0,0,0,0.3);
         z-index: 999;
-    "
-    onclick="scrollToTop()">
-    ↑
-</button>
+    " onclick="scrollToTop()">
+        ↑
+    </button>
 
-<script>
-    const btn = document.getElementById("backToTopBtn");
+    <script>
+        const btn = document.getElementById("backToTopBtn");
 
-    // Show button on scroll
-    window.onscroll = function () {
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-            btn.style.display = "block";
-        } else {
-            btn.style.display = "none";
+        // Show button on scroll
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        // Scroll to top smoothly
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         }
-    };
 
-    // Scroll to top smoothly
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    }
-    
-</script>
+    </script>
     <script src="script.js"></script>
 </body>
 
